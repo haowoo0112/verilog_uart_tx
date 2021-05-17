@@ -1,0 +1,76 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/USER/Desktop/uart_tx/simulation/modelsim
+vhard_block
+Z1 !s110 1587372655
+!i10b 1
+!s100 X:mV_Y]E;Yh>=bF3SGE622
+Ig<ihEnbP1nGjFIW<ALU@80
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1587372637
+Z4 8uart_tx.vo
+Z5 Fuart_tx.vo
+L0 1679
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1587372655.000000
+Z8 !s107 uart_tx.vo|
+Z9 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+.|uart_tx.vo|
+!i113 1
+Z10 o-vlog01compat -work work
+Z11 !s92 -vlog01compat -work work +incdir+.
+Z12 tCvgOpt 0
+vhw1_tb
+!s110 1587372656
+!i10b 1
+!s100 0COgC`:dZ6j[33KdmBVDe1
+I]>96:^26kRH1fAn^zbjBT3
+R2
+R0
+w1586181065
+8C:/Users/USER/Desktop/uart_tx/hw1_tb.v
+FC:/Users/USER/Desktop/uart_tx/hw1_tb.v
+L0 3
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/Users/USER/Desktop/uart_tx/hw1_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/USER/Desktop/uart_tx|C:/Users/USER/Desktop/uart_tx/hw1_tb.v|
+!i113 1
+R10
+!s92 -vlog01compat -work work +incdir+C:/Users/USER/Desktop/uart_tx
+R12
+vuart_tx
+R1
+!i10b 1
+!s100 QmC8T15JJ1022FKPWJnNd1
+I<33QX19b7JjcP]i^hAlF<2
+R2
+R0
+R3
+R4
+R5
+L0 31
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+R12

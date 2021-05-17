@@ -1,0 +1,118 @@
+Info: Start Nativelink Simulation process
+
+========= EDA Simulation Settings =====================
+
+Sim Mode              :  Gate
+Family                :  cycloneive
+Quartus root          :  d:/quartus/quartus/bin64/
+Quartus sim root      :  d:/quartus/quartus/eda/sim_lib
+Simulation Tool       :  modelsim-altera
+Simulation Language   :  verilog
+Simulation Mode       :  GUI
+Sim Output File       :  uart_tx.vo
+Sim SDF file          :  uart_tx__verilog.sdo
+Sim dir               :  simulation\modelsim
+
+=======================================================
+
+Info: Starting NativeLink simulation with ModelSim-Altera software
+Sourced NativeLink script d:/quartus/quartus/common/tcl/internal/nativelink/modelsim.tcl
+Warning: File uart_tx_run_msim_gate_verilog.do already exists - backing up current file as uart_tx_run_msim_gate_verilog.do.bak
+Probing transcript
+ModelSim-Altera Info: # Reading D:/ModelSim/modelsim_ase/tcl/vsim/pref.tcl
+ModelSim-Altera Info: # do uart_tx_run_msim_gate_verilog.do
+ModelSim-Altera Info: # if {[file exists gate_work]} {
+ModelSim-Altera Info: # 	vdel -lib gate_work -all
+ModelSim-Altera Info: # }
+ModelSim-Altera Info: # vlib gate_work
+ModelSim-Altera Info: # vmap work gate_work
+ModelSim-Altera Info: # Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+ModelSim-Altera Info: # vmap work gate_work 
+ModelSim-Altera Info: # Copying D:/ModelSim/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+ModelSim-Altera Info: # Modifying modelsim.ini
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # vlog -vlog01compat -work work +incdir+. {uart_tx.vo}
+ModelSim-Altera Info: # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+ModelSim-Altera Info: # Start time: 16:50:55 on Apr 20,2020
+ModelSim-Altera Info: # vlog -reportprogress 300 -vlog01compat -work work "+incdir+." uart_tx.vo 
+ModelSim-Altera Info: # -- Compiling module uart_tx
+ModelSim-Altera Info: # -- Compiling module hard_block
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Top level modules:
+ModelSim-Altera Info: # 	uart_tx
+ModelSim-Altera Info: # End time: 16:50:55 on Apr 20,2020, Elapsed time: 0:00:00
+ModelSim-Altera Info: # Errors: 0, Warnings: 0
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # vlog -vlog01compat -work work +incdir+C:/Users/USER/Desktop/uart_tx {C:/Users/USER/Desktop/uart_tx/hw1_tb.v}
+ModelSim-Altera Info: # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+ModelSim-Altera Info: # Start time: 16:50:55 on Apr 20,2020
+ModelSim-Altera Info: # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/USER/Desktop/uart_tx" C:/Users/USER/Desktop/uart_tx/hw1_tb.v 
+ModelSim-Altera Info: # -- Compiling module hw1_tb
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Top level modules:
+ModelSim-Altera Info: # 	hw1_tb
+ModelSim-Altera Info: # End time: 16:50:56 on Apr 20,2020, Elapsed time: 0:00:01
+ModelSim-Altera Info: # Errors: 0, Warnings: 0
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # vsim -t 1ps +transport_int_delays +transport_path_delays -L altera_ver -L cycloneive_ver -L gate_work -L work -voptargs="+acc"  hw1_tb
+ModelSim-Altera Info: # vsim -t 1ps "+transport_int_delays" "+transport_path_delays" -L altera_ver -L cycloneive_ver -L gate_work -L work -voptargs=""+acc"" hw1_tb 
+ModelSim-Altera Info: # Start time: 16:50:56 on Apr 20,2020
+ModelSim-Altera Info: # Loading work.hw1_tb
+ModelSim-Altera Info: # Loading work.uart_tx
+ModelSim-Altera Info: # Loading work.hard_block
+ModelSim-Altera Info: # Loading cycloneive_ver.cycloneive_io_obuf
+ModelSim-Altera Info: # Loading cycloneive_ver.cycloneive_io_ibuf
+ModelSim-Altera Info: # Loading cycloneive_ver.cycloneive_clkctrl
+ModelSim-Altera Info: # Loading cycloneive_ver.cycloneive_mux41
+ModelSim-Altera Info: # Loading cycloneive_ver.cycloneive_ena_reg
+ModelSim-Altera Info: # Loading cycloneive_ver.cycloneive_lcell_comb
+ModelSim-Altera Info: # Loading altera_ver.dffeas
+ModelSim-Altera Info: # SDF 10.5b Compiler 2016.10 Oct  5 2016
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # Loading instances from uart_tx_v.sdo
+ModelSim-Altera Info: # Loading altera_ver.PRIM_GDFF_LOW
+ModelSim-Altera Info: # Loading timing data from uart_tx_v.sdo
+ModelSim-Altera Info: # ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+ModelSim-Altera Info: #    Time: 0 ps  Iteration: 0  Instance: /hw1_tb File: C:/Users/USER/Desktop/uart_tx/hw1_tb.v
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # add wave *
+ModelSim-Altera Info: # view structure
+ModelSim-Altera Info: # .main_pane.structure.interior.cs.body.struct
+ModelSim-Altera Info: # view signals
+ModelSim-Altera Info: # .main_pane.objects.interior.cs.body.tree
+ModelSim-Altera Info: # run -all
+ModelSim-Altera Info: # time=  0 reset_n=0 write=0 write_value= 33 uart_txd=x
+ModelSim-Altera Info: # time=  4 reset_n=0 write=0 write_value= 33 uart_txd=1
+ModelSim-Altera Info: # time= 30 reset_n=1 write=0 write_value= 33 uart_txd=1
+ModelSim-Altera Info: # time=235 reset_n=1 write=1 write_value= 33 uart_txd=1
+ModelSim-Altera Info: # time=747 reset_n=1 write=0 write_value= 33 uart_txd=1
+ModelSim-Altera Info: # time=82016 reset_n=1 write=0 write_value= 33 uart_txd=0
+ModelSim-Altera Info: # time=186196 reset_n=1 write=0 write_value= 33 uart_txd=1
+ModelSim-Altera Info: # time=290376 reset_n=1 write=0 write_value= 33 uart_txd=0
+ModelSim-Altera Info: # time=707096 reset_n=1 write=0 write_value= 33 uart_txd=1
+ModelSim-Altera Info: # time=811276 reset_n=1 write=0 write_value= 33 uart_txd=0
+ModelSim-Altera Info: # time=1019636 reset_n=1 write=0 write_value= 33 uart_txd=1
+ModelSim-Altera Info: # uart rx data = 21 
+ModelSim-Altera Info: # time=1500747 reset_n=1 write=0 write_value= 67 uart_txd=1
+ModelSim-Altera Info: # time=1501092 reset_n=1 write=1 write_value= 67 uart_txd=1
+ModelSim-Altera Info: # time=1501365 reset_n=1 write=0 write_value= 67 uart_txd=1
+ModelSim-Altera Info: # time=1540536 reset_n=1 write=0 write_value= 67 uart_txd=0
+ModelSim-Altera Info: # time=1644716 reset_n=1 write=0 write_value= 67 uart_txd=1
+ModelSim-Altera Info: # time=1853076 reset_n=1 write=0 write_value= 67 uart_txd=0
+ModelSim-Altera Info: # time=2269796 reset_n=1 write=0 write_value= 67 uart_txd=1
+ModelSim-Altera Info: # time=2373976 reset_n=1 write=0 write_value= 67 uart_txd=0
+ModelSim-Altera Info: # time=2478156 reset_n=1 write=0 write_value= 67 uart_txd=1
+ModelSim-Altera Info: # uart rx data = 43 
+ModelSim-Altera Info: # time=3001365 reset_n=1 write=0 write_value=101 uart_txd=1
+ModelSim-Altera Info: # time=3001810 reset_n=1 write=1 write_value=101 uart_txd=1
+ModelSim-Altera Info: # time=3001983 reset_n=1 write=0 write_value=101 uart_txd=1
+ModelSim-Altera Info: # time=3103236 reset_n=1 write=0 write_value=101 uart_txd=0
+ModelSim-Altera Info: # time=3207416 reset_n=1 write=0 write_value=101 uart_txd=1
+ModelSim-Altera Info: # time=3311596 reset_n=1 write=0 write_value=101 uart_txd=0
+ModelSim-Altera Info: # time=3415776 reset_n=1 write=0 write_value=101 uart_txd=1
+ModelSim-Altera Info: # time=3519956 reset_n=1 write=0 write_value=101 uart_txd=0
+ModelSim-Altera Info: # Break key hit
+ModelSim-Altera Info: # Break in Module cycloneive_lcell_comb at /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v line 4250
+ModelSim-Altera Info: # End time: 16:51:21 on Apr 20,2020, Elapsed time: 0:00:25
+ModelSim-Altera Info: # Errors: 0, Warnings: 0
+Info: NativeLink simulation flow was successful

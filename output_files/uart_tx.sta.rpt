@@ -1,0 +1,1199 @@
+Timing Analyzer report for uart_tx
+Mon Apr 20 16:50:34 2020
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow 1200mV 85C Model Fmax Summary
+  6. Timing Closure Recommendations
+  7. Slow 1200mV 85C Model Setup Summary
+  8. Slow 1200mV 85C Model Hold Summary
+  9. Slow 1200mV 85C Model Recovery Summary
+ 10. Slow 1200mV 85C Model Removal Summary
+ 11. Slow 1200mV 85C Model Minimum Pulse Width Summary
+ 12. Slow 1200mV 85C Model Setup: 'clk_50M'
+ 13. Slow 1200mV 85C Model Hold: 'clk_50M'
+ 14. Slow 1200mV 85C Model Metastability Summary
+ 15. Slow 1200mV 0C Model Fmax Summary
+ 16. Slow 1200mV 0C Model Setup Summary
+ 17. Slow 1200mV 0C Model Hold Summary
+ 18. Slow 1200mV 0C Model Recovery Summary
+ 19. Slow 1200mV 0C Model Removal Summary
+ 20. Slow 1200mV 0C Model Minimum Pulse Width Summary
+ 21. Slow 1200mV 0C Model Setup: 'clk_50M'
+ 22. Slow 1200mV 0C Model Hold: 'clk_50M'
+ 23. Slow 1200mV 0C Model Metastability Summary
+ 24. Fast 1200mV 0C Model Setup Summary
+ 25. Fast 1200mV 0C Model Hold Summary
+ 26. Fast 1200mV 0C Model Recovery Summary
+ 27. Fast 1200mV 0C Model Removal Summary
+ 28. Fast 1200mV 0C Model Minimum Pulse Width Summary
+ 29. Fast 1200mV 0C Model Setup: 'clk_50M'
+ 30. Fast 1200mV 0C Model Hold: 'clk_50M'
+ 31. Fast 1200mV 0C Model Metastability Summary
+ 32. Multicorner Timing Analysis Summary
+ 33. Board Trace Model Assignments
+ 34. Input Transition Times
+ 35. Signal Integrity Metrics (Slow 1200mv 0c Model)
+ 36. Signal Integrity Metrics (Slow 1200mv 85c Model)
+ 37. Signal Integrity Metrics (Fast 1200mv 0c Model)
+ 38. Setup Transfers
+ 39. Hold Transfers
+ 40. Report TCCS
+ 41. Report RSKM
+ 42. Unconstrained Paths Summary
+ 43. Clock Status Summary
+ 44. Unconstrained Input Ports
+ 45. Unconstrained Output Ports
+ 46. Unconstrained Input Ports
+ 47. Unconstrained Output Ports
+ 48. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                     ;
++-----------------------+-----------------------------------------------------+
+; Quartus Prime Version ; Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Timing Analyzer       ; Legacy Timing Analyzer                              ;
+; Revision Name         ; uart_tx                                             ;
+; Device Family         ; Cyclone IV E                                        ;
+; Device Name           ; EP4CE6E22C6                                         ;
+; Timing Models         ; Final                                               ;
+; Delay Model           ; Combined                                            ;
+; Rise/Fall Delays      ; Enabled                                             ;
++-----------------------+-----------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.01        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.3%      ;
+;     Processors 3-4         ;   0.3%      ;
++----------------------------+-------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                              ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-------------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets     ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-------------+
+; clk_50M    ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk_50M } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-------------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Fmax Summary                                                                        ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note                                                          ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; 375.94 MHz ; 250.0 MHz       ; clk_50M    ; limit due to minimum period restriction (max I/O toggle rate) ;
++------------+-----------------+------------+---------------------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
+----------------------------------
+; Timing Closure Recommendations ;
+----------------------------------
+HTML report is unavailable in plain text report export.
+
+
++-------------------------------------+
+; Slow 1200mV 85C Model Setup Summary ;
++---------+--------+------------------+
+; Clock   ; Slack  ; End Point TNS    ;
++---------+--------+------------------+
+; clk_50M ; -1.660 ; -27.663          ;
++---------+--------+------------------+
+
+
++------------------------------------+
+; Slow 1200mV 85C Model Hold Summary ;
++---------+-------+------------------+
+; Clock   ; Slack ; End Point TNS    ;
++---------+-------+------------------+
+; clk_50M ; 0.356 ; 0.000            ;
++---------+-------+------------------+
+
+
+------------------------------------------
+; Slow 1200mV 85C Model Recovery Summary ;
+------------------------------------------
+No paths to report.
+
+
+-----------------------------------------
+; Slow 1200mV 85C Model Removal Summary ;
+-----------------------------------------
+No paths to report.
+
+
++---------------------------------------------------+
+; Slow 1200mV 85C Model Minimum Pulse Width Summary ;
++---------+--------+--------------------------------+
+; Clock   ; Slack  ; End Point TNS                  ;
++---------+--------+--------------------------------+
+; clk_50M ; -3.000 ; -34.000                        ;
++---------+--------+--------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Setup: 'clk_50M'                                                                                             ;
++--------+---------------------------------+-------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                       ; To Node           ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------------------+-------------------+--------------+-------------+--------------+------------+------------+
+; -1.660 ; bound9600_reg[0]                ; bound9600_reg[12] ; clk_50M      ; clk_50M     ; 1.000        ; -0.064     ; 2.591      ;
+; -1.621 ; bound9600_reg[2]                ; bound9600_reg[0]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.064     ; 2.552      ;
+; -1.617 ; bound9600_reg[3]                ; bound9600_reg[12] ; clk_50M      ; clk_50M     ; 1.000        ; -0.065     ; 2.547      ;
+; -1.613 ; bound9600_reg[8]                ; bound9600_reg[0]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.064     ; 2.544      ;
+; -1.610 ; bound9600_reg[1]                ; bound9600_reg[12] ; clk_50M      ; clk_50M     ; 1.000        ; -0.064     ; 2.541      ;
+; -1.569 ; bound9600_reg[0]                ; bound9600_reg[10] ; clk_50M      ; clk_50M     ; 1.000        ; -0.063     ; 2.501      ;
+; -1.542 ; bound9600_reg[4]                ; bound9600_reg[0]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.064     ; 2.473      ;
+; -1.536 ; bound9600_reg[0]                ; bound9600_reg[0]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.064     ; 2.467      ;
+; -1.526 ; bound9600_reg[9]                ; bound9600_reg[0]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.064     ; 2.457      ;
+; -1.526 ; bound9600_reg[3]                ; bound9600_reg[10] ; clk_50M      ; clk_50M     ; 1.000        ; -0.064     ; 2.457      ;
+; -1.519 ; bound9600_reg[1]                ; bound9600_reg[10] ; clk_50M      ; clk_50M     ; 1.000        ; -0.063     ; 2.451      ;
+; -1.487 ; bound9600_reg[3]                ; bound9600_reg[0]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.065     ; 2.417      ;
+; -1.485 ; send_counter[0]                 ; uart_txd~reg0     ; clk_50M      ; clk_50M     ; 1.000        ; -0.064     ; 2.416      ;
+; -1.450 ; bound9600_reg[12]               ; bound9600_reg[0]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.064     ; 2.381      ;
+; -1.449 ; bound9600_reg[2]                ; bound9600_reg[4]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.064     ; 2.380      ;
+; -1.441 ; bound9600_reg[8]                ; bound9600_reg[4]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.064     ; 2.372      ;
+; -1.437 ; bound9600_reg[6]                ; bound9600_reg[0]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.064     ; 2.368      ;
+; -1.414 ; bound9600_reg[2]                ; bound9600_reg[12] ; clk_50M      ; clk_50M     ; 1.000        ; -0.064     ; 2.345      ;
+; -1.412 ; bound9600_reg[10]               ; bound9600_reg[0]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.065     ; 2.342      ;
+; -1.390 ; send_counter[2]                 ; uart_txd~reg0     ; clk_50M      ; clk_50M     ; 1.000        ; -0.064     ; 2.321      ;
+; -1.377 ; bound9600_reg[5]                ; bound9600_reg[12] ; clk_50M      ; clk_50M     ; 1.000        ; -0.064     ; 2.308      ;
+; -1.372 ; bound9600_reg[1]                ; bound9600_reg[0]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.064     ; 2.303      ;
+; -1.354 ; bound9600_reg[9]                ; bound9600_reg[4]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.064     ; 2.285      ;
+; -1.346 ; bound9600_reg[4]                ; bound9600_reg[4]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.064     ; 2.277      ;
+; -1.339 ; bound9600_reg[0]                ; bound9600_reg[3]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.063     ; 2.271      ;
+; -1.323 ; bound9600_reg[2]                ; bound9600_reg[10] ; clk_50M      ; clk_50M     ; 1.000        ; -0.063     ; 2.255      ;
+; -1.315 ; bound9600_reg[0]                ; bound9600_reg[6]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.064     ; 2.246      ;
+; -1.297 ; bound9600_reg[4]                ; bound9600_reg[12] ; clk_50M      ; clk_50M     ; 1.000        ; -0.064     ; 2.228      ;
+; -1.292 ; value[7]                        ; uart_txd~reg0     ; clk_50M      ; clk_50M     ; 1.000        ; -0.064     ; 2.223      ;
+; -1.291 ; value[3]                        ; uart_txd~reg0     ; clk_50M      ; clk_50M     ; 1.000        ; -0.064     ; 2.222      ;
+; -1.291 ; bound9600_reg[3]                ; bound9600_reg[4]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.065     ; 2.221      ;
+; -1.286 ; bound9600_reg[5]                ; bound9600_reg[10] ; clk_50M      ; clk_50M     ; 1.000        ; -0.063     ; 2.218      ;
+; -1.286 ; bound9600_reg[11]               ; bound9600_reg[0]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.064     ; 2.217      ;
+; -1.272 ; bound9600_reg[3]                ; bound9600_reg[6]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.065     ; 2.202      ;
+; -1.269 ; bound9600_reg[5]                ; bound9600_reg[0]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.064     ; 2.200      ;
+; -1.269 ; bound9600_reg[8]                ; bound9600_reg[10] ; clk_50M      ; clk_50M     ; 1.000        ; -0.063     ; 2.201      ;
+; -1.265 ; bound9600_reg[7]                ; bound9600_reg[12] ; clk_50M      ; clk_50M     ; 1.000        ; -0.064     ; 2.196      ;
+; -1.265 ; bound9600_reg[1]                ; bound9600_reg[6]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.064     ; 2.196      ;
+; -1.254 ; bound9600_reg[12]               ; bound9600_reg[4]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.064     ; 2.185      ;
+; -1.241 ; bound9600_reg[6]                ; bound9600_reg[4]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.064     ; 2.172      ;
+; -1.216 ; bound9600_reg[10]               ; bound9600_reg[4]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.065     ; 2.146      ;
+; -1.206 ; bound9600_reg[4]                ; bound9600_reg[10] ; clk_50M      ; clk_50M     ; 1.000        ; -0.063     ; 2.138      ;
+; -1.200 ; bound9600_reg[1]                ; bound9600_reg[4]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.064     ; 2.131      ;
+; -1.199 ; bound9600_reg[2]                ; bound9600_reg[6]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.064     ; 2.130      ;
+; -1.193 ; bound9600_reg[0]                ; bound9600_reg[11] ; clk_50M      ; clk_50M     ; 1.000        ; -0.064     ; 2.124      ;
+; -1.192 ; send_counter[1]                 ; uart_txd~reg0     ; clk_50M      ; clk_50M     ; 1.000        ; -0.064     ; 2.123      ;
+; -1.191 ; bound9600_reg[1]                ; bound9600_reg[3]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.063     ; 2.123      ;
+; -1.191 ; bound9600_reg[8]                ; bound9600_reg[12] ; clk_50M      ; clk_50M     ; 1.000        ; -0.064     ; 2.122      ;
+; -1.191 ; bound9600_reg[8]                ; bound9600_reg[6]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.064     ; 2.122      ;
+; -1.182 ; bound9600_reg[6]                ; bound9600_reg[12] ; clk_50M      ; clk_50M     ; 1.000        ; -0.064     ; 2.113      ;
+; -1.182 ; bound9600_reg[9]                ; bound9600_reg[10] ; clk_50M      ; clk_50M     ; 1.000        ; -0.063     ; 2.114      ;
+; -1.174 ; bound9600_reg[7]                ; bound9600_reg[10] ; clk_50M      ; clk_50M     ; 1.000        ; -0.063     ; 2.106      ;
+; -1.149 ; bound9600_reg[9]                ; bound9600_reg[12] ; clk_50M      ; clk_50M     ; 1.000        ; -0.064     ; 2.080      ;
+; -1.141 ; bound9600_reg[7]                ; bound9600_reg[0]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.064     ; 2.072      ;
+; -1.114 ; bound9600_reg[11]               ; bound9600_reg[4]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.064     ; 2.045      ;
+; -1.108 ; bound9600_reg[12]               ; bound9600_reg[10] ; clk_50M      ; clk_50M     ; 1.000        ; -0.063     ; 2.040      ;
+; -1.106 ; bound9600_reg[4]                ; bound9600_reg[6]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.064     ; 2.037      ;
+; -1.104 ; bound9600_reg[9]                ; bound9600_reg[6]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.064     ; 2.035      ;
+; -1.097 ; bound9600_reg[5]                ; bound9600_reg[4]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.064     ; 2.028      ;
+; -1.095 ; bound9600_reg[0]                ; bound9600_reg[4]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.064     ; 2.026      ;
+; -1.095 ; bound9600_reg[6]                ; bound9600_reg[10] ; clk_50M      ; clk_50M     ; 1.000        ; -0.063     ; 2.027      ;
+; -1.077 ; bound9600_reg[0]                ; bound9600_reg[9]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.064     ; 2.008      ;
+; -1.076 ; bound9600_reg[10]               ; bound9600_reg[12] ; clk_50M      ; clk_50M     ; 1.000        ; -0.065     ; 2.006      ;
+; -1.076 ; bound9600_reg[2]                ; bound9600_reg[3]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.063     ; 2.008      ;
+; -1.070 ; bound9600_reg[10]               ; bound9600_reg[10] ; clk_50M      ; clk_50M     ; 1.000        ; -0.064     ; 2.001      ;
+; -1.051 ; bound9600_reg[3]                ; bound9600_reg[11] ; clk_50M      ; clk_50M     ; 1.000        ; -0.065     ; 1.981      ;
+; -1.044 ; bound9600_reg[1]                ; bound9600_reg[11] ; clk_50M      ; clk_50M     ; 1.000        ; -0.064     ; 1.975      ;
+; -1.033 ; bound9600_reg[8]                ; bound9600_reg[3]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.063     ; 1.965      ;
+; -1.032 ; bound9600_reg[11]               ; bound9600_reg[12] ; clk_50M      ; clk_50M     ; 1.000        ; -0.064     ; 1.963      ;
+; -1.032 ; bound9600_reg[5]                ; bound9600_reg[6]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.064     ; 1.963      ;
+; -1.014 ; bound9600_reg[12]               ; bound9600_reg[12] ; clk_50M      ; clk_50M     ; 1.000        ; -0.064     ; 1.945      ;
+; -1.014 ; bound9600_reg[12]               ; bound9600_reg[6]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.064     ; 1.945      ;
+; -1.001 ; bound9600_reg[6]                ; bound9600_reg[6]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.064     ; 1.932      ;
+; -0.984 ; bound9600_reg[0]                ; bound9600_reg[8]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.064     ; 1.915      ;
+; -0.979 ; value[4]                        ; uart_txd~reg0     ; clk_50M      ; clk_50M     ; 1.000        ; -0.064     ; 1.910      ;
+; -0.976 ; bound9600_reg[10]               ; bound9600_reg[6]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.065     ; 1.906      ;
+; -0.969 ; bound9600_reg[7]                ; bound9600_reg[4]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.064     ; 1.900      ;
+; -0.962 ; bound9600_reg[4]                ; bound9600_reg[3]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.063     ; 1.894      ;
+; -0.961 ; bound9600_reg[0]                ; bound9600_reg[7]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.064     ; 1.892      ;
+; -0.946 ; bound9600_reg[9]                ; bound9600_reg[3]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.063     ; 1.878      ;
+; -0.943 ; edge_detect:comb_155|data_in_d1 ; send_counter[3]   ; clk_50M      ; clk_50M     ; 1.000        ; -0.067     ; 1.871      ;
+; -0.943 ; edge_detect:comb_155|data_in_d1 ; send_counter[2]   ; clk_50M      ; clk_50M     ; 1.000        ; -0.067     ; 1.871      ;
+; -0.943 ; edge_detect:comb_155|data_in_d1 ; send_counter[1]   ; clk_50M      ; clk_50M     ; 1.000        ; -0.067     ; 1.871      ;
+; -0.943 ; edge_detect:comb_155|data_in_d1 ; send_counter[0]   ; clk_50M      ; clk_50M     ; 1.000        ; -0.067     ; 1.871      ;
+; -0.942 ; bound9600_reg[11]               ; bound9600_reg[10] ; clk_50M      ; clk_50M     ; 1.000        ; -0.063     ; 1.874      ;
+; -0.941 ; value[2]                        ; uart_txd~reg0     ; clk_50M      ; clk_50M     ; 1.000        ; -0.064     ; 1.872      ;
+; -0.941 ; bound9600_reg[3]                ; bound9600_reg[8]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.065     ; 1.871      ;
+; -0.935 ; bound9600_reg[3]                ; bound9600_reg[9]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.065     ; 1.865      ;
+; -0.934 ; bound9600_reg[1]                ; bound9600_reg[8]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.064     ; 1.865      ;
+; -0.930 ; bound9600_reg[2]                ; bound9600_reg[11] ; clk_50M      ; clk_50M     ; 1.000        ; -0.064     ; 1.861      ;
+; -0.928 ; bound9600_reg[1]                ; bound9600_reg[9]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.064     ; 1.859      ;
+; -0.907 ; bound9600_reg[3]                ; bound9600_reg[3]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.064     ; 1.838      ;
+; -0.892 ; value[6]                        ; uart_txd~reg0     ; clk_50M      ; clk_50M     ; 1.000        ; -0.064     ; 1.823      ;
+; -0.870 ; bound9600_reg[12]               ; bound9600_reg[3]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.063     ; 1.802      ;
+; -0.864 ; bound9600_reg[11]               ; bound9600_reg[6]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.064     ; 1.795      ;
+; -0.857 ; bound9600_reg[6]                ; bound9600_reg[3]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.063     ; 1.789      ;
+; -0.854 ; tx_flag                         ; send_counter[3]   ; clk_50M      ; clk_50M     ; 1.000        ; -0.064     ; 1.785      ;
+; -0.854 ; tx_flag                         ; send_counter[2]   ; clk_50M      ; clk_50M     ; 1.000        ; -0.064     ; 1.785      ;
+; -0.854 ; tx_flag                         ; send_counter[1]   ; clk_50M      ; clk_50M     ; 1.000        ; -0.064     ; 1.785      ;
+; -0.854 ; tx_flag                         ; send_counter[0]   ; clk_50M      ; clk_50M     ; 1.000        ; -0.064     ; 1.785      ;
++--------+---------------------------------+-------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Hold: 'clk_50M'                                                                                                           ;
++-------+---------------------------------+---------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                       ; To Node                         ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------------+---------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.356 ; uart_txd~reg0                   ; uart_txd~reg0                   ; clk_50M      ; clk_50M     ; 0.000        ; 0.064      ; 0.577      ;
+; 0.356 ; send_counter[3]                 ; send_counter[3]                 ; clk_50M      ; clk_50M     ; 0.000        ; 0.064      ; 0.577      ;
+; 0.356 ; tx_flag                         ; tx_flag                         ; clk_50M      ; clk_50M     ; 0.000        ; 0.064      ; 0.577      ;
+; 0.356 ; send_counter[2]                 ; send_counter[2]                 ; clk_50M      ; clk_50M     ; 0.000        ; 0.064      ; 0.577      ;
+; 0.356 ; send_counter[1]                 ; send_counter[1]                 ; clk_50M      ; clk_50M     ; 0.000        ; 0.064      ; 0.577      ;
+; 0.359 ; send_counter[0]                 ; send_counter[0]                 ; clk_50M      ; clk_50M     ; 0.000        ; 0.064      ; 0.580      ;
+; 0.397 ; send_counter[2]                 ; send_counter[3]                 ; clk_50M      ; clk_50M     ; 0.000        ; 0.064      ; 0.618      ;
+; 0.399 ; edge_detect:comb_156|data_in_d1 ; edge_detect:comb_156|data_in_d2 ; clk_50M      ; clk_50M     ; 0.000        ; 0.064      ; 0.620      ;
+; 0.409 ; send_counter[0]                 ; send_counter[2]                 ; clk_50M      ; clk_50M     ; 0.000        ; 0.064      ; 0.630      ;
+; 0.410 ; send_counter[0]                 ; send_counter[1]                 ; clk_50M      ; clk_50M     ; 0.000        ; 0.064      ; 0.631      ;
+; 0.412 ; tx_flag                         ; send_counter[0]                 ; clk_50M      ; clk_50M     ; 0.000        ; 0.064      ; 0.633      ;
+; 0.549 ; edge_detect:comb_156|data_in_d2 ; tx_flag                         ; clk_50M      ; clk_50M     ; 0.000        ; 0.064      ; 0.770      ;
+; 0.554 ; bound9600_reg[11]               ; edge_detect:comb_155|data_in_d1 ; clk_50M      ; clk_50M     ; 0.000        ; 0.065      ; 0.776      ;
+; 0.567 ; bound9600_reg[5]                ; bound9600_reg[5]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.064      ; 0.788      ;
+; 0.567 ; bound9600_reg[2]                ; bound9600_reg[2]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.064      ; 0.788      ;
+; 0.568 ; bound9600_reg[1]                ; bound9600_reg[1]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.064      ; 0.789      ;
+; 0.569 ; bound9600_reg[11]               ; bound9600_reg[11]               ; clk_50M      ; clk_50M     ; 0.000        ; 0.064      ; 0.790      ;
+; 0.570 ; bound9600_reg[7]                ; bound9600_reg[7]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.064      ; 0.791      ;
+; 0.570 ; bound9600_reg[9]                ; bound9600_reg[9]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.064      ; 0.791      ;
+; 0.572 ; bound9600_reg[8]                ; bound9600_reg[8]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.064      ; 0.793      ;
+; 0.581 ; send_counter[1]                 ; send_counter[2]                 ; clk_50M      ; clk_50M     ; 0.000        ; 0.064      ; 0.802      ;
+; 0.596 ; tx_flag                         ; send_counter[3]                 ; clk_50M      ; clk_50M     ; 0.000        ; 0.064      ; 0.817      ;
+; 0.596 ; tx_flag                         ; send_counter[1]                 ; clk_50M      ; clk_50M     ; 0.000        ; 0.064      ; 0.817      ;
+; 0.715 ; tx_flag                         ; send_counter[2]                 ; clk_50M      ; clk_50M     ; 0.000        ; 0.064      ; 0.936      ;
+; 0.734 ; edge_detect:comb_156|data_in_d1 ; tx_flag                         ; clk_50M      ; clk_50M     ; 0.000        ; 0.064      ; 0.955      ;
+; 0.792 ; edge_detect:comb_155|data_in_d1 ; edge_detect:comb_155|data_in_d2 ; clk_50M      ; clk_50M     ; 0.000        ; 0.061      ; 1.010      ;
+; 0.842 ; bound9600_reg[1]                ; bound9600_reg[2]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.064      ; 1.063      ;
+; 0.844 ; bound9600_reg[7]                ; bound9600_reg[8]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.064      ; 1.065      ;
+; 0.858 ; bound9600_reg[4]                ; bound9600_reg[5]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.064      ; 1.079      ;
+; 0.859 ; bound9600_reg[6]                ; bound9600_reg[7]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.064      ; 1.080      ;
+; 0.859 ; bound9600_reg[8]                ; bound9600_reg[9]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.064      ; 1.080      ;
+; 0.861 ; bound9600_reg[6]                ; bound9600_reg[8]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.064      ; 1.082      ;
+; 0.863 ; bound9600_reg[4]                ; bound9600_reg[4]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.064      ; 1.084      ;
+; 0.885 ; send_counter[0]                 ; send_counter[3]                 ; clk_50M      ; clk_50M     ; 0.000        ; 0.064      ; 1.106      ;
+; 0.908 ; bound9600_reg[12]               ; bound9600_reg[12]               ; clk_50M      ; clk_50M     ; 0.000        ; 0.064      ; 1.129      ;
+; 0.921 ; tx_flag                         ; uart_txd~reg0                   ; clk_50M      ; clk_50M     ; 0.000        ; 0.064      ; 1.142      ;
+; 0.939 ; value[1]                        ; uart_txd~reg0                   ; clk_50M      ; clk_50M     ; 0.000        ; 0.064      ; 1.160      ;
+; 0.943 ; send_counter[0]                 ; tx_flag                         ; clk_50M      ; clk_50M     ; 0.000        ; 0.064      ; 1.164      ;
+; 0.952 ; bound9600_reg[5]                ; bound9600_reg[7]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.064      ; 1.173      ;
+; 0.954 ; bound9600_reg[9]                ; bound9600_reg[11]               ; clk_50M      ; clk_50M     ; 0.000        ; 0.064      ; 1.175      ;
+; 0.954 ; bound9600_reg[7]                ; bound9600_reg[9]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.064      ; 1.175      ;
+; 0.954 ; bound9600_reg[5]                ; bound9600_reg[8]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.064      ; 1.175      ;
+; 0.967 ; bound9600_reg[2]                ; bound9600_reg[5]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.064      ; 1.188      ;
+; 0.970 ; bound9600_reg[4]                ; bound9600_reg[7]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.064      ; 1.191      ;
+; 0.971 ; bound9600_reg[6]                ; bound9600_reg[6]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.064      ; 1.192      ;
+; 0.971 ; bound9600_reg[8]                ; bound9600_reg[11]               ; clk_50M      ; clk_50M     ; 0.000        ; 0.064      ; 1.192      ;
+; 0.971 ; bound9600_reg[6]                ; bound9600_reg[9]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.064      ; 1.192      ;
+; 0.972 ; bound9600_reg[4]                ; bound9600_reg[8]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.064      ; 1.193      ;
+; 0.974 ; send_counter[1]                 ; send_counter[3]                 ; clk_50M      ; clk_50M     ; 0.000        ; 0.064      ; 1.195      ;
+; 0.995 ; bound9600_reg[10]               ; bound9600_reg[11]               ; clk_50M      ; clk_50M     ; 0.000        ; 0.063      ; 1.215      ;
+; 0.996 ; bound9600_reg[0]                ; bound9600_reg[1]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.064      ; 1.217      ;
+; 0.998 ; bound9600_reg[0]                ; bound9600_reg[2]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.064      ; 1.219      ;
+; 1.023 ; send_counter[3]                 ; tx_flag                         ; clk_50M      ; clk_50M     ; 0.000        ; 0.064      ; 1.244      ;
+; 1.038 ; send_counter[2]                 ; uart_txd~reg0                   ; clk_50M      ; clk_50M     ; 0.000        ; 0.064      ; 1.259      ;
+; 1.053 ; send_counter[2]                 ; tx_flag                         ; clk_50M      ; clk_50M     ; 0.000        ; 0.064      ; 1.274      ;
+; 1.055 ; send_counter[1]                 ; uart_txd~reg0                   ; clk_50M      ; clk_50M     ; 0.000        ; 0.064      ; 1.276      ;
+; 1.064 ; bound9600_reg[1]                ; bound9600_reg[5]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.064      ; 1.285      ;
+; 1.064 ; bound9600_reg[5]                ; bound9600_reg[9]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.064      ; 1.285      ;
+; 1.066 ; bound9600_reg[7]                ; bound9600_reg[11]               ; clk_50M      ; clk_50M     ; 0.000        ; 0.064      ; 1.287      ;
+; 1.079 ; bound9600_reg[2]                ; bound9600_reg[7]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.064      ; 1.300      ;
+; 1.081 ; bound9600_reg[2]                ; bound9600_reg[8]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.064      ; 1.302      ;
+; 1.082 ; bound9600_reg[4]                ; bound9600_reg[9]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.064      ; 1.303      ;
+; 1.083 ; bound9600_reg[6]                ; bound9600_reg[11]               ; clk_50M      ; clk_50M     ; 0.000        ; 0.064      ; 1.304      ;
+; 1.091 ; bound9600_reg[3]                ; bound9600_reg[5]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.063      ; 1.311      ;
+; 1.115 ; value[5]                        ; uart_txd~reg0                   ; clk_50M      ; clk_50M     ; 0.000        ; 0.064      ; 1.336      ;
+; 1.149 ; bound9600_reg[2]                ; bound9600_reg[4]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.064      ; 1.370      ;
+; 1.157 ; bound9600_reg[10]               ; bound9600_reg[10]               ; clk_50M      ; clk_50M     ; 0.000        ; 0.064      ; 1.378      ;
+; 1.173 ; bound9600_reg[7]                ; bound9600_reg[3]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.065      ; 1.395      ;
+; 1.176 ; bound9600_reg[1]                ; bound9600_reg[7]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.064      ; 1.397      ;
+; 1.176 ; bound9600_reg[5]                ; bound9600_reg[11]               ; clk_50M      ; clk_50M     ; 0.000        ; 0.064      ; 1.397      ;
+; 1.178 ; bound9600_reg[1]                ; bound9600_reg[8]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.064      ; 1.399      ;
+; 1.191 ; bound9600_reg[2]                ; bound9600_reg[9]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.064      ; 1.412      ;
+; 1.194 ; bound9600_reg[4]                ; bound9600_reg[11]               ; clk_50M      ; clk_50M     ; 0.000        ; 0.064      ; 1.415      ;
+; 1.203 ; send_counter[3]                 ; uart_txd~reg0                   ; clk_50M      ; clk_50M     ; 0.000        ; 0.064      ; 1.424      ;
+; 1.203 ; bound9600_reg[3]                ; bound9600_reg[7]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.063      ; 1.423      ;
+; 1.205 ; bound9600_reg[3]                ; bound9600_reg[8]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.063      ; 1.425      ;
+; 1.220 ; bound9600_reg[0]                ; bound9600_reg[5]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.064      ; 1.441      ;
+; 1.229 ; value[0]                        ; uart_txd~reg0                   ; clk_50M      ; clk_50M     ; 0.000        ; 0.064      ; 1.450      ;
+; 1.230 ; edge_detect:comb_156|data_in_d2 ; value[0]                        ; clk_50M      ; clk_50M     ; 0.000        ; 0.064      ; 1.451      ;
+; 1.230 ; edge_detect:comb_156|data_in_d2 ; value[1]                        ; clk_50M      ; clk_50M     ; 0.000        ; 0.064      ; 1.451      ;
+; 1.230 ; edge_detect:comb_156|data_in_d2 ; value[2]                        ; clk_50M      ; clk_50M     ; 0.000        ; 0.064      ; 1.451      ;
+; 1.230 ; edge_detect:comb_156|data_in_d2 ; value[3]                        ; clk_50M      ; clk_50M     ; 0.000        ; 0.064      ; 1.451      ;
+; 1.230 ; edge_detect:comb_156|data_in_d2 ; value[5]                        ; clk_50M      ; clk_50M     ; 0.000        ; 0.064      ; 1.451      ;
+; 1.230 ; edge_detect:comb_156|data_in_d2 ; value[4]                        ; clk_50M      ; clk_50M     ; 0.000        ; 0.064      ; 1.451      ;
+; 1.230 ; edge_detect:comb_156|data_in_d2 ; value[6]                        ; clk_50M      ; clk_50M     ; 0.000        ; 0.064      ; 1.451      ;
+; 1.230 ; edge_detect:comb_156|data_in_d2 ; value[7]                        ; clk_50M      ; clk_50M     ; 0.000        ; 0.064      ; 1.451      ;
+; 1.240 ; bound9600_reg[11]               ; bound9600_reg[12]               ; clk_50M      ; clk_50M     ; 0.000        ; 0.064      ; 1.461      ;
+; 1.241 ; bound9600_reg[5]                ; bound9600_reg[6]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.064      ; 1.462      ;
+; 1.246 ; bound9600_reg[1]                ; bound9600_reg[4]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.064      ; 1.467      ;
+; 1.258 ; send_counter[1]                 ; tx_flag                         ; clk_50M      ; clk_50M     ; 0.000        ; 0.064      ; 1.479      ;
+; 1.259 ; bound9600_reg[4]                ; bound9600_reg[6]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.064      ; 1.480      ;
+; 1.270 ; bound9600_reg[3]                ; bound9600_reg[3]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.064      ; 1.491      ;
+; 1.273 ; bound9600_reg[3]                ; bound9600_reg[4]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.063      ; 1.493      ;
+; 1.286 ; bound9600_reg[0]                ; bound9600_reg[3]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.065      ; 1.508      ;
+; 1.288 ; bound9600_reg[1]                ; bound9600_reg[9]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.064      ; 1.509      ;
+; 1.294 ; bound9600_reg[9]                ; bound9600_reg[10]               ; clk_50M      ; clk_50M     ; 0.000        ; 0.065      ; 1.516      ;
+; 1.303 ; bound9600_reg[2]                ; bound9600_reg[11]               ; clk_50M      ; clk_50M     ; 0.000        ; 0.064      ; 1.524      ;
+; 1.307 ; bound9600_reg[5]                ; bound9600_reg[3]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.065      ; 1.529      ;
+; 1.311 ; bound9600_reg[8]                ; bound9600_reg[10]               ; clk_50M      ; clk_50M     ; 0.000        ; 0.065      ; 1.533      ;
+; 1.312 ; bound9600_reg[7]                ; bound9600_reg[12]               ; clk_50M      ; clk_50M     ; 0.000        ; 0.064      ; 1.533      ;
++-------+---------------------------------+---------------------------------+--------------+-------------+--------------+------------+------------+
+
+
+-----------------------------------------------
+; Slow 1200mV 85C Model Metastability Summary ;
+-----------------------------------------------
+No synchronizer chains to report.
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Fmax Summary                                                                         ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note                                                          ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; 421.94 MHz ; 250.0 MHz       ; clk_50M    ; limit due to minimum period restriction (max I/O toggle rate) ;
++------------+-----------------+------------+---------------------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++------------------------------------+
+; Slow 1200mV 0C Model Setup Summary ;
++---------+--------+-----------------+
+; Clock   ; Slack  ; End Point TNS   ;
++---------+--------+-----------------+
+; clk_50M ; -1.370 ; -21.809         ;
++---------+--------+-----------------+
+
+
++-----------------------------------+
+; Slow 1200mV 0C Model Hold Summary ;
++---------+-------+-----------------+
+; Clock   ; Slack ; End Point TNS   ;
++---------+-------+-----------------+
+; clk_50M ; 0.310 ; 0.000           ;
++---------+-------+-----------------+
+
+
+-----------------------------------------
+; Slow 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Slow 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++--------------------------------------------------+
+; Slow 1200mV 0C Model Minimum Pulse Width Summary ;
++---------+--------+-------------------------------+
+; Clock   ; Slack  ; End Point TNS                 ;
++---------+--------+-------------------------------+
+; clk_50M ; -3.000 ; -34.000                       ;
++---------+--------+-------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Setup: 'clk_50M'                                                                                              ;
++--------+---------------------------------+-------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                       ; To Node           ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------------------+-------------------+--------------+-------------+--------------+------------+------------+
+; -1.370 ; bound9600_reg[8]                ; bound9600_reg[0]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.057     ; 2.308      ;
+; -1.363 ; bound9600_reg[2]                ; bound9600_reg[0]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.057     ; 2.301      ;
+; -1.347 ; bound9600_reg[0]                ; bound9600_reg[12] ; clk_50M      ; clk_50M     ; 1.000        ; -0.057     ; 2.285      ;
+; -1.307 ; bound9600_reg[3]                ; bound9600_reg[12] ; clk_50M      ; clk_50M     ; 1.000        ; -0.057     ; 2.245      ;
+; -1.300 ; bound9600_reg[1]                ; bound9600_reg[12] ; clk_50M      ; clk_50M     ; 1.000        ; -0.057     ; 2.238      ;
+; -1.296 ; bound9600_reg[9]                ; bound9600_reg[0]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.057     ; 2.234      ;
+; -1.292 ; bound9600_reg[0]                ; bound9600_reg[10] ; clk_50M      ; clk_50M     ; 1.000        ; -0.057     ; 2.230      ;
+; -1.287 ; bound9600_reg[4]                ; bound9600_reg[0]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.057     ; 2.225      ;
+; -1.257 ; bound9600_reg[0]                ; bound9600_reg[0]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.057     ; 2.195      ;
+; -1.252 ; bound9600_reg[3]                ; bound9600_reg[10] ; clk_50M      ; clk_50M     ; 1.000        ; -0.057     ; 2.190      ;
+; -1.245 ; bound9600_reg[1]                ; bound9600_reg[10] ; clk_50M      ; clk_50M     ; 1.000        ; -0.057     ; 2.183      ;
+; -1.240 ; bound9600_reg[3]                ; bound9600_reg[0]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.057     ; 2.178      ;
+; -1.216 ; send_counter[0]                 ; uart_txd~reg0     ; clk_50M      ; clk_50M     ; 1.000        ; -0.057     ; 2.154      ;
+; -1.210 ; bound9600_reg[12]               ; bound9600_reg[0]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.057     ; 2.148      ;
+; -1.201 ; bound9600_reg[2]                ; bound9600_reg[4]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.057     ; 2.139      ;
+; -1.196 ; bound9600_reg[8]                ; bound9600_reg[4]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.057     ; 2.134      ;
+; -1.190 ; bound9600_reg[6]                ; bound9600_reg[0]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.057     ; 2.128      ;
+; -1.180 ; bound9600_reg[10]               ; bound9600_reg[0]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.057     ; 2.118      ;
+; -1.136 ; bound9600_reg[1]                ; bound9600_reg[0]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.057     ; 2.074      ;
+; -1.134 ; bound9600_reg[2]                ; bound9600_reg[12] ; clk_50M      ; clk_50M     ; 1.000        ; -0.057     ; 2.072      ;
+; -1.130 ; send_counter[2]                 ; uart_txd~reg0     ; clk_50M      ; clk_50M     ; 1.000        ; -0.057     ; 2.068      ;
+; -1.114 ; bound9600_reg[9]                ; bound9600_reg[4]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.057     ; 2.052      ;
+; -1.099 ; bound9600_reg[5]                ; bound9600_reg[12] ; clk_50M      ; clk_50M     ; 1.000        ; -0.057     ; 2.037      ;
+; -1.098 ; bound9600_reg[0]                ; bound9600_reg[3]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.057     ; 2.036      ;
+; -1.091 ; bound9600_reg[4]                ; bound9600_reg[4]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.057     ; 2.029      ;
+; -1.079 ; bound9600_reg[2]                ; bound9600_reg[10] ; clk_50M      ; clk_50M     ; 1.000        ; -0.057     ; 2.017      ;
+; -1.075 ; bound9600_reg[11]               ; bound9600_reg[0]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.057     ; 2.013      ;
+; -1.050 ; bound9600_reg[0]                ; bound9600_reg[6]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.057     ; 1.988      ;
+; -1.048 ; bound9600_reg[5]                ; bound9600_reg[0]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.057     ; 1.986      ;
+; -1.044 ; bound9600_reg[5]                ; bound9600_reg[10] ; clk_50M      ; clk_50M     ; 1.000        ; -0.057     ; 1.982      ;
+; -1.044 ; value[3]                        ; uart_txd~reg0     ; clk_50M      ; clk_50M     ; 1.000        ; -0.057     ; 1.982      ;
+; -1.044 ; bound9600_reg[3]                ; bound9600_reg[4]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.057     ; 1.982      ;
+; -1.042 ; bound9600_reg[8]                ; bound9600_reg[10] ; clk_50M      ; clk_50M     ; 1.000        ; -0.057     ; 1.980      ;
+; -1.038 ; value[7]                        ; uart_txd~reg0     ; clk_50M      ; clk_50M     ; 1.000        ; -0.057     ; 1.976      ;
+; -1.032 ; bound9600_reg[4]                ; bound9600_reg[12] ; clk_50M      ; clk_50M     ; 1.000        ; -0.057     ; 1.970      ;
+; -1.014 ; bound9600_reg[12]               ; bound9600_reg[4]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.057     ; 1.952      ;
+; -1.010 ; bound9600_reg[3]                ; bound9600_reg[6]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.057     ; 1.948      ;
+; -1.003 ; bound9600_reg[7]                ; bound9600_reg[12] ; clk_50M      ; clk_50M     ; 1.000        ; -0.057     ; 1.941      ;
+; -1.003 ; bound9600_reg[1]                ; bound9600_reg[6]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.057     ; 1.941      ;
+; -0.994 ; bound9600_reg[6]                ; bound9600_reg[4]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.057     ; 1.932      ;
+; -0.984 ; bound9600_reg[10]               ; bound9600_reg[4]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.057     ; 1.922      ;
+; -0.979 ; bound9600_reg[1]                ; bound9600_reg[4]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.057     ; 1.917      ;
+; -0.977 ; bound9600_reg[4]                ; bound9600_reg[10] ; clk_50M      ; clk_50M     ; 1.000        ; -0.057     ; 1.915      ;
+; -0.975 ; bound9600_reg[2]                ; bound9600_reg[6]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.057     ; 1.913      ;
+; -0.971 ; bound9600_reg[8]                ; bound9600_reg[12] ; clk_50M      ; clk_50M     ; 1.000        ; -0.057     ; 1.909      ;
+; -0.970 ; bound9600_reg[8]                ; bound9600_reg[6]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.057     ; 1.908      ;
+; -0.969 ; send_counter[1]                 ; uart_txd~reg0     ; clk_50M      ; clk_50M     ; 1.000        ; -0.057     ; 1.907      ;
+; -0.968 ; bound9600_reg[9]                ; bound9600_reg[10] ; clk_50M      ; clk_50M     ; 1.000        ; -0.057     ; 1.906      ;
+; -0.953 ; bound9600_reg[0]                ; bound9600_reg[11] ; clk_50M      ; clk_50M     ; 1.000        ; -0.057     ; 1.891      ;
+; -0.948 ; bound9600_reg[7]                ; bound9600_reg[10] ; clk_50M      ; clk_50M     ; 1.000        ; -0.057     ; 1.886      ;
+; -0.934 ; bound9600_reg[1]                ; bound9600_reg[3]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.057     ; 1.872      ;
+; -0.932 ; bound9600_reg[6]                ; bound9600_reg[12] ; clk_50M      ; clk_50M     ; 1.000        ; -0.057     ; 1.870      ;
+; -0.923 ; bound9600_reg[7]                ; bound9600_reg[0]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.057     ; 1.861      ;
+; -0.903 ; bound9600_reg[9]                ; bound9600_reg[12] ; clk_50M      ; clk_50M     ; 1.000        ; -0.057     ; 1.841      ;
+; -0.902 ; bound9600_reg[11]               ; bound9600_reg[4]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.057     ; 1.840      ;
+; -0.891 ; bound9600_reg[5]                ; bound9600_reg[4]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.057     ; 1.829      ;
+; -0.890 ; bound9600_reg[9]                ; bound9600_reg[6]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.057     ; 1.828      ;
+; -0.882 ; bound9600_reg[12]               ; bound9600_reg[10] ; clk_50M      ; clk_50M     ; 1.000        ; -0.057     ; 1.820      ;
+; -0.881 ; bound9600_reg[4]                ; bound9600_reg[6]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.057     ; 1.819      ;
+; -0.877 ; bound9600_reg[6]                ; bound9600_reg[10] ; clk_50M      ; clk_50M     ; 1.000        ; -0.057     ; 1.815      ;
+; -0.875 ; bound9600_reg[0]                ; bound9600_reg[4]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.057     ; 1.813      ;
+; -0.853 ; bound9600_reg[0]                ; bound9600_reg[9]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.057     ; 1.791      ;
+; -0.852 ; bound9600_reg[10]               ; bound9600_reg[10] ; clk_50M      ; clk_50M     ; 1.000        ; -0.057     ; 1.790      ;
+; -0.851 ; bound9600_reg[2]                ; bound9600_reg[3]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.057     ; 1.789      ;
+; -0.846 ; bound9600_reg[10]               ; bound9600_reg[12] ; clk_50M      ; clk_50M     ; 1.000        ; -0.057     ; 1.784      ;
+; -0.835 ; bound9600_reg[8]                ; bound9600_reg[3]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.057     ; 1.773      ;
+; -0.804 ; bound9600_reg[12]               ; bound9600_reg[12] ; clk_50M      ; clk_50M     ; 1.000        ; -0.057     ; 1.742      ;
+; -0.804 ; bound9600_reg[12]               ; bound9600_reg[6]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.057     ; 1.742      ;
+; -0.802 ; bound9600_reg[5]                ; bound9600_reg[6]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.057     ; 1.740      ;
+; -0.801 ; bound9600_reg[11]               ; bound9600_reg[12] ; clk_50M      ; clk_50M     ; 1.000        ; -0.057     ; 1.739      ;
+; -0.798 ; bound9600_reg[3]                ; bound9600_reg[11] ; clk_50M      ; clk_50M     ; 1.000        ; -0.057     ; 1.736      ;
+; -0.791 ; bound9600_reg[1]                ; bound9600_reg[11] ; clk_50M      ; clk_50M     ; 1.000        ; -0.057     ; 1.729      ;
+; -0.784 ; bound9600_reg[6]                ; bound9600_reg[6]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.057     ; 1.722      ;
+; -0.774 ; bound9600_reg[7]                ; bound9600_reg[4]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.057     ; 1.712      ;
+; -0.774 ; bound9600_reg[10]               ; bound9600_reg[6]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.057     ; 1.712      ;
+; -0.766 ; value[4]                        ; uart_txd~reg0     ; clk_50M      ; clk_50M     ; 1.000        ; -0.057     ; 1.704      ;
+; -0.761 ; bound9600_reg[9]                ; bound9600_reg[3]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.057     ; 1.699      ;
+; -0.756 ; bound9600_reg[0]                ; bound9600_reg[8]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.057     ; 1.694      ;
+; -0.753 ; bound9600_reg[0]                ; bound9600_reg[7]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.057     ; 1.691      ;
+; -0.752 ; bound9600_reg[4]                ; bound9600_reg[3]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.057     ; 1.690      ;
+; -0.747 ; bound9600_reg[11]               ; bound9600_reg[10] ; clk_50M      ; clk_50M     ; 1.000        ; -0.057     ; 1.685      ;
+; -0.739 ; edge_detect:comb_155|data_in_d1 ; send_counter[3]   ; clk_50M      ; clk_50M     ; 1.000        ; -0.060     ; 1.674      ;
+; -0.739 ; edge_detect:comb_155|data_in_d1 ; send_counter[2]   ; clk_50M      ; clk_50M     ; 1.000        ; -0.060     ; 1.674      ;
+; -0.739 ; edge_detect:comb_155|data_in_d1 ; send_counter[1]   ; clk_50M      ; clk_50M     ; 1.000        ; -0.060     ; 1.674      ;
+; -0.739 ; edge_detect:comb_155|data_in_d1 ; send_counter[0]   ; clk_50M      ; clk_50M     ; 1.000        ; -0.060     ; 1.674      ;
+; -0.731 ; value[2]                        ; uart_txd~reg0     ; clk_50M      ; clk_50M     ; 1.000        ; -0.057     ; 1.669      ;
+; -0.716 ; bound9600_reg[3]                ; bound9600_reg[8]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.057     ; 1.654      ;
+; -0.709 ; bound9600_reg[1]                ; bound9600_reg[8]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.057     ; 1.647      ;
+; -0.706 ; bound9600_reg[2]                ; bound9600_reg[11] ; clk_50M      ; clk_50M     ; 1.000        ; -0.057     ; 1.644      ;
+; -0.705 ; bound9600_reg[3]                ; bound9600_reg[3]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.057     ; 1.643      ;
+; -0.698 ; bound9600_reg[3]                ; bound9600_reg[9]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.057     ; 1.636      ;
+; -0.691 ; bound9600_reg[1]                ; bound9600_reg[9]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.057     ; 1.629      ;
+; -0.683 ; value[6]                        ; uart_txd~reg0     ; clk_50M      ; clk_50M     ; 1.000        ; -0.057     ; 1.621      ;
+; -0.676 ; bound9600_reg[11]               ; bound9600_reg[6]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.057     ; 1.614      ;
+; -0.675 ; bound9600_reg[12]               ; bound9600_reg[3]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.057     ; 1.613      ;
+; -0.669 ; tx_flag                         ; send_counter[3]   ; clk_50M      ; clk_50M     ; 1.000        ; -0.057     ; 1.607      ;
+; -0.669 ; tx_flag                         ; send_counter[2]   ; clk_50M      ; clk_50M     ; 1.000        ; -0.057     ; 1.607      ;
+; -0.669 ; tx_flag                         ; send_counter[1]   ; clk_50M      ; clk_50M     ; 1.000        ; -0.057     ; 1.607      ;
+; -0.669 ; tx_flag                         ; send_counter[0]   ; clk_50M      ; clk_50M     ; 1.000        ; -0.057     ; 1.607      ;
+; -0.656 ; send_counter[3]                 ; uart_txd~reg0     ; clk_50M      ; clk_50M     ; 1.000        ; -0.057     ; 1.594      ;
++--------+---------------------------------+-------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Hold: 'clk_50M'                                                                                                            ;
++-------+---------------------------------+---------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                       ; To Node                         ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------------+---------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.310 ; uart_txd~reg0                   ; uart_txd~reg0                   ; clk_50M      ; clk_50M     ; 0.000        ; 0.057      ; 0.511      ;
+; 0.310 ; send_counter[3]                 ; send_counter[3]                 ; clk_50M      ; clk_50M     ; 0.000        ; 0.057      ; 0.511      ;
+; 0.310 ; tx_flag                         ; tx_flag                         ; clk_50M      ; clk_50M     ; 0.000        ; 0.057      ; 0.511      ;
+; 0.310 ; send_counter[2]                 ; send_counter[2]                 ; clk_50M      ; clk_50M     ; 0.000        ; 0.057      ; 0.511      ;
+; 0.310 ; send_counter[1]                 ; send_counter[1]                 ; clk_50M      ; clk_50M     ; 0.000        ; 0.057      ; 0.511      ;
+; 0.318 ; send_counter[0]                 ; send_counter[0]                 ; clk_50M      ; clk_50M     ; 0.000        ; 0.057      ; 0.519      ;
+; 0.352 ; send_counter[2]                 ; send_counter[3]                 ; clk_50M      ; clk_50M     ; 0.000        ; 0.057      ; 0.553      ;
+; 0.362 ; edge_detect:comb_156|data_in_d1 ; edge_detect:comb_156|data_in_d2 ; clk_50M      ; clk_50M     ; 0.000        ; 0.057      ; 0.563      ;
+; 0.365 ; send_counter[0]                 ; send_counter[2]                 ; clk_50M      ; clk_50M     ; 0.000        ; 0.057      ; 0.566      ;
+; 0.365 ; send_counter[0]                 ; send_counter[1]                 ; clk_50M      ; clk_50M     ; 0.000        ; 0.057      ; 0.566      ;
+; 0.369 ; tx_flag                         ; send_counter[0]                 ; clk_50M      ; clk_50M     ; 0.000        ; 0.057      ; 0.570      ;
+; 0.506 ; edge_detect:comb_156|data_in_d2 ; tx_flag                         ; clk_50M      ; clk_50M     ; 0.000        ; 0.057      ; 0.707      ;
+; 0.509 ; bound9600_reg[5]                ; bound9600_reg[5]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.057      ; 0.710      ;
+; 0.509 ; bound9600_reg[2]                ; bound9600_reg[2]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.057      ; 0.710      ;
+; 0.511 ; bound9600_reg[1]                ; bound9600_reg[1]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.057      ; 0.712      ;
+; 0.512 ; bound9600_reg[11]               ; bound9600_reg[11]               ; clk_50M      ; clk_50M     ; 0.000        ; 0.057      ; 0.713      ;
+; 0.512 ; bound9600_reg[9]                ; bound9600_reg[9]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.057      ; 0.713      ;
+; 0.512 ; bound9600_reg[11]               ; edge_detect:comb_155|data_in_d1 ; clk_50M      ; clk_50M     ; 0.000        ; 0.057      ; 0.713      ;
+; 0.513 ; bound9600_reg[7]                ; bound9600_reg[7]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.057      ; 0.714      ;
+; 0.514 ; bound9600_reg[8]                ; bound9600_reg[8]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.057      ; 0.715      ;
+; 0.521 ; send_counter[1]                 ; send_counter[2]                 ; clk_50M      ; clk_50M     ; 0.000        ; 0.057      ; 0.722      ;
+; 0.533 ; tx_flag                         ; send_counter[3]                 ; clk_50M      ; clk_50M     ; 0.000        ; 0.057      ; 0.734      ;
+; 0.533 ; tx_flag                         ; send_counter[1]                 ; clk_50M      ; clk_50M     ; 0.000        ; 0.057      ; 0.734      ;
+; 0.651 ; tx_flag                         ; send_counter[2]                 ; clk_50M      ; clk_50M     ; 0.000        ; 0.057      ; 0.852      ;
+; 0.669 ; edge_detect:comb_156|data_in_d1 ; tx_flag                         ; clk_50M      ; clk_50M     ; 0.000        ; 0.057      ; 0.870      ;
+; 0.725 ; edge_detect:comb_155|data_in_d1 ; edge_detect:comb_155|data_in_d2 ; clk_50M      ; clk_50M     ; 0.000        ; 0.054      ; 0.923      ;
+; 0.756 ; bound9600_reg[1]                ; bound9600_reg[2]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.057      ; 0.957      ;
+; 0.758 ; bound9600_reg[7]                ; bound9600_reg[8]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.057      ; 0.959      ;
+; 0.763 ; bound9600_reg[4]                ; bound9600_reg[5]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.057      ; 0.964      ;
+; 0.763 ; bound9600_reg[8]                ; bound9600_reg[9]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.057      ; 0.964      ;
+; 0.764 ; bound9600_reg[6]                ; bound9600_reg[7]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.057      ; 0.965      ;
+; 0.771 ; bound9600_reg[6]                ; bound9600_reg[8]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.057      ; 0.972      ;
+; 0.781 ; bound9600_reg[4]                ; bound9600_reg[4]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.057      ; 0.982      ;
+; 0.799 ; send_counter[0]                 ; send_counter[3]                 ; clk_50M      ; clk_50M     ; 0.000        ; 0.057      ; 1.000      ;
+; 0.826 ; bound9600_reg[12]               ; bound9600_reg[12]               ; clk_50M      ; clk_50M     ; 0.000        ; 0.057      ; 1.027      ;
+; 0.840 ; send_counter[0]                 ; tx_flag                         ; clk_50M      ; clk_50M     ; 0.000        ; 0.057      ; 1.041      ;
+; 0.841 ; tx_flag                         ; uart_txd~reg0                   ; clk_50M      ; clk_50M     ; 0.000        ; 0.057      ; 1.042      ;
+; 0.842 ; bound9600_reg[5]                ; bound9600_reg[7]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.057      ; 1.043      ;
+; 0.845 ; value[1]                        ; uart_txd~reg0                   ; clk_50M      ; clk_50M     ; 0.000        ; 0.057      ; 1.046      ;
+; 0.846 ; bound9600_reg[9]                ; bound9600_reg[11]               ; clk_50M      ; clk_50M     ; 0.000        ; 0.057      ; 1.047      ;
+; 0.847 ; bound9600_reg[7]                ; bound9600_reg[9]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.057      ; 1.048      ;
+; 0.849 ; bound9600_reg[5]                ; bound9600_reg[8]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.057      ; 1.050      ;
+; 0.854 ; bound9600_reg[2]                ; bound9600_reg[5]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.057      ; 1.055      ;
+; 0.859 ; bound9600_reg[4]                ; bound9600_reg[7]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.057      ; 1.060      ;
+; 0.859 ; bound9600_reg[8]                ; bound9600_reg[11]               ; clk_50M      ; clk_50M     ; 0.000        ; 0.057      ; 1.060      ;
+; 0.860 ; bound9600_reg[6]                ; bound9600_reg[9]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.057      ; 1.061      ;
+; 0.866 ; bound9600_reg[4]                ; bound9600_reg[8]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.057      ; 1.067      ;
+; 0.876 ; send_counter[1]                 ; send_counter[3]                 ; clk_50M      ; clk_50M     ; 0.000        ; 0.057      ; 1.077      ;
+; 0.877 ; bound9600_reg[6]                ; bound9600_reg[6]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.057      ; 1.078      ;
+; 0.894 ; bound9600_reg[10]               ; bound9600_reg[11]               ; clk_50M      ; clk_50M     ; 0.000        ; 0.057      ; 1.095      ;
+; 0.900 ; bound9600_reg[0]                ; bound9600_reg[1]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.057      ; 1.101      ;
+; 0.907 ; bound9600_reg[0]                ; bound9600_reg[2]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.057      ; 1.108      ;
+; 0.912 ; send_counter[3]                 ; tx_flag                         ; clk_50M      ; clk_50M     ; 0.000        ; 0.057      ; 1.113      ;
+; 0.937 ; send_counter[2]                 ; uart_txd~reg0                   ; clk_50M      ; clk_50M     ; 0.000        ; 0.057      ; 1.138      ;
+; 0.938 ; bound9600_reg[5]                ; bound9600_reg[9]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.057      ; 1.139      ;
+; 0.941 ; bound9600_reg[1]                ; bound9600_reg[5]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.057      ; 1.142      ;
+; 0.943 ; bound9600_reg[7]                ; bound9600_reg[11]               ; clk_50M      ; clk_50M     ; 0.000        ; 0.057      ; 1.144      ;
+; 0.949 ; send_counter[2]                 ; tx_flag                         ; clk_50M      ; clk_50M     ; 0.000        ; 0.057      ; 1.150      ;
+; 0.950 ; bound9600_reg[2]                ; bound9600_reg[7]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.057      ; 1.151      ;
+; 0.955 ; bound9600_reg[4]                ; bound9600_reg[9]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.057      ; 1.156      ;
+; 0.956 ; bound9600_reg[6]                ; bound9600_reg[11]               ; clk_50M      ; clk_50M     ; 0.000        ; 0.057      ; 1.157      ;
+; 0.957 ; bound9600_reg[2]                ; bound9600_reg[8]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.057      ; 1.158      ;
+; 0.960 ; send_counter[1]                 ; uart_txd~reg0                   ; clk_50M      ; clk_50M     ; 0.000        ; 0.057      ; 1.161      ;
+; 0.970 ; bound9600_reg[3]                ; bound9600_reg[5]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.057      ; 1.171      ;
+; 0.999 ; value[5]                        ; uart_txd~reg0                   ; clk_50M      ; clk_50M     ; 0.000        ; 0.057      ; 1.200      ;
+; 1.032 ; bound9600_reg[2]                ; bound9600_reg[4]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.057      ; 1.233      ;
+; 1.034 ; bound9600_reg[5]                ; bound9600_reg[11]               ; clk_50M      ; clk_50M     ; 0.000        ; 0.057      ; 1.235      ;
+; 1.037 ; bound9600_reg[1]                ; bound9600_reg[7]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.057      ; 1.238      ;
+; 1.044 ; bound9600_reg[1]                ; bound9600_reg[8]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.057      ; 1.245      ;
+; 1.046 ; bound9600_reg[2]                ; bound9600_reg[9]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.057      ; 1.247      ;
+; 1.051 ; bound9600_reg[4]                ; bound9600_reg[11]               ; clk_50M      ; clk_50M     ; 0.000        ; 0.057      ; 1.252      ;
+; 1.061 ; bound9600_reg[10]               ; bound9600_reg[10]               ; clk_50M      ; clk_50M     ; 0.000        ; 0.057      ; 1.262      ;
+; 1.066 ; bound9600_reg[7]                ; bound9600_reg[3]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.057      ; 1.267      ;
+; 1.066 ; bound9600_reg[3]                ; bound9600_reg[7]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.057      ; 1.267      ;
+; 1.081 ; bound9600_reg[3]                ; bound9600_reg[8]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.057      ; 1.282      ;
+; 1.088 ; send_counter[3]                 ; uart_txd~reg0                   ; clk_50M      ; clk_50M     ; 0.000        ; 0.057      ; 1.289      ;
+; 1.092 ; bound9600_reg[0]                ; bound9600_reg[5]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.057      ; 1.293      ;
+; 1.110 ; value[0]                        ; uart_txd~reg0                   ; clk_50M      ; clk_50M     ; 0.000        ; 0.057      ; 1.311      ;
+; 1.114 ; edge_detect:comb_156|data_in_d2 ; value[0]                        ; clk_50M      ; clk_50M     ; 0.000        ; 0.057      ; 1.315      ;
+; 1.114 ; edge_detect:comb_156|data_in_d2 ; value[1]                        ; clk_50M      ; clk_50M     ; 0.000        ; 0.057      ; 1.315      ;
+; 1.114 ; edge_detect:comb_156|data_in_d2 ; value[2]                        ; clk_50M      ; clk_50M     ; 0.000        ; 0.057      ; 1.315      ;
+; 1.114 ; edge_detect:comb_156|data_in_d2 ; value[3]                        ; clk_50M      ; clk_50M     ; 0.000        ; 0.057      ; 1.315      ;
+; 1.114 ; edge_detect:comb_156|data_in_d2 ; value[5]                        ; clk_50M      ; clk_50M     ; 0.000        ; 0.057      ; 1.315      ;
+; 1.114 ; edge_detect:comb_156|data_in_d2 ; value[4]                        ; clk_50M      ; clk_50M     ; 0.000        ; 0.057      ; 1.315      ;
+; 1.114 ; edge_detect:comb_156|data_in_d2 ; value[6]                        ; clk_50M      ; clk_50M     ; 0.000        ; 0.057      ; 1.315      ;
+; 1.114 ; edge_detect:comb_156|data_in_d2 ; value[7]                        ; clk_50M      ; clk_50M     ; 0.000        ; 0.057      ; 1.315      ;
+; 1.115 ; bound9600_reg[5]                ; bound9600_reg[6]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.057      ; 1.316      ;
+; 1.117 ; bound9600_reg[11]               ; bound9600_reg[12]               ; clk_50M      ; clk_50M     ; 0.000        ; 0.057      ; 1.318      ;
+; 1.119 ; bound9600_reg[1]                ; bound9600_reg[4]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.057      ; 1.320      ;
+; 1.132 ; bound9600_reg[4]                ; bound9600_reg[6]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.057      ; 1.333      ;
+; 1.133 ; bound9600_reg[1]                ; bound9600_reg[9]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.057      ; 1.334      ;
+; 1.134 ; send_counter[1]                 ; tx_flag                         ; clk_50M      ; clk_50M     ; 0.000        ; 0.057      ; 1.335      ;
+; 1.142 ; bound9600_reg[2]                ; bound9600_reg[11]               ; clk_50M      ; clk_50M     ; 0.000        ; 0.057      ; 1.343      ;
+; 1.156 ; bound9600_reg[3]                ; bound9600_reg[4]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.057      ; 1.357      ;
+; 1.162 ; bound9600_reg[3]                ; bound9600_reg[9]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.057      ; 1.363      ;
+; 1.168 ; bound9600_reg[3]                ; bound9600_reg[3]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.057      ; 1.369      ;
+; 1.170 ; bound9600_reg[0]                ; bound9600_reg[3]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.057      ; 1.371      ;
+; 1.172 ; bound9600_reg[9]                ; bound9600_reg[10]               ; clk_50M      ; clk_50M     ; 0.000        ; 0.057      ; 1.373      ;
+; 1.183 ; bound9600_reg[5]                ; bound9600_reg[3]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.057      ; 1.384      ;
+; 1.185 ; bound9600_reg[8]                ; bound9600_reg[10]               ; clk_50M      ; clk_50M     ; 0.000        ; 0.057      ; 1.386      ;
++-------+---------------------------------+---------------------------------+--------------+-------------+--------------+------------+------------+
+
+
+----------------------------------------------
+; Slow 1200mV 0C Model Metastability Summary ;
+----------------------------------------------
+No synchronizer chains to report.
+
+
++------------------------------------+
+; Fast 1200mV 0C Model Setup Summary ;
++---------+--------+-----------------+
+; Clock   ; Slack  ; End Point TNS   ;
++---------+--------+-----------------+
+; clk_50M ; -0.502 ; -3.741          ;
++---------+--------+-----------------+
+
+
++-----------------------------------+
+; Fast 1200mV 0C Model Hold Summary ;
++---------+-------+-----------------+
+; Clock   ; Slack ; End Point TNS   ;
++---------+-------+-----------------+
+; clk_50M ; 0.186 ; 0.000           ;
++---------+-------+-----------------+
+
+
+-----------------------------------------
+; Fast 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Fast 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++--------------------------------------------------+
+; Fast 1200mV 0C Model Minimum Pulse Width Summary ;
++---------+--------+-------------------------------+
+; Clock   ; Slack  ; End Point TNS                 ;
++---------+--------+-------------------------------+
+; clk_50M ; -3.000 ; -35.984                       ;
++---------+--------+-------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Setup: 'clk_50M'                                                                                              ;
++--------+---------------------------------+-------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                       ; To Node           ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------------------+-------------------+--------------+-------------+--------------+------------+------------+
+; -0.502 ; bound9600_reg[0]                ; bound9600_reg[12] ; clk_50M      ; clk_50M     ; 1.000        ; -0.037     ; 1.452      ;
+; -0.472 ; bound9600_reg[3]                ; bound9600_reg[12] ; clk_50M      ; clk_50M     ; 1.000        ; -0.037     ; 1.422      ;
+; -0.468 ; bound9600_reg[1]                ; bound9600_reg[12] ; clk_50M      ; clk_50M     ; 1.000        ; -0.037     ; 1.418      ;
+; -0.458 ; bound9600_reg[0]                ; bound9600_reg[10] ; clk_50M      ; clk_50M     ; 1.000        ; -0.037     ; 1.408      ;
+; -0.453 ; bound9600_reg[8]                ; bound9600_reg[0]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.037     ; 1.403      ;
+; -0.451 ; bound9600_reg[2]                ; bound9600_reg[0]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.037     ; 1.401      ;
+; -0.428 ; bound9600_reg[3]                ; bound9600_reg[10] ; clk_50M      ; clk_50M     ; 1.000        ; -0.037     ; 1.378      ;
+; -0.424 ; bound9600_reg[1]                ; bound9600_reg[10] ; clk_50M      ; clk_50M     ; 1.000        ; -0.037     ; 1.374      ;
+; -0.421 ; bound9600_reg[0]                ; bound9600_reg[0]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.037     ; 1.371      ;
+; -0.398 ; bound9600_reg[9]                ; bound9600_reg[0]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.037     ; 1.348      ;
+; -0.396 ; bound9600_reg[4]                ; bound9600_reg[0]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.037     ; 1.346      ;
+; -0.387 ; send_counter[0]                 ; uart_txd~reg0     ; clk_50M      ; clk_50M     ; 1.000        ; -0.037     ; 1.337      ;
+; -0.361 ; bound9600_reg[3]                ; bound9600_reg[0]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.037     ; 1.311      ;
+; -0.353 ; bound9600_reg[8]                ; bound9600_reg[4]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.037     ; 1.303      ;
+; -0.352 ; bound9600_reg[2]                ; bound9600_reg[12] ; clk_50M      ; clk_50M     ; 1.000        ; -0.037     ; 1.302      ;
+; -0.351 ; bound9600_reg[2]                ; bound9600_reg[4]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.037     ; 1.301      ;
+; -0.347 ; send_counter[2]                 ; uart_txd~reg0     ; clk_50M      ; clk_50M     ; 1.000        ; -0.037     ; 1.297      ;
+; -0.338 ; bound9600_reg[12]               ; bound9600_reg[0]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.037     ; 1.288      ;
+; -0.333 ; bound9600_reg[6]                ; bound9600_reg[0]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.037     ; 1.283      ;
+; -0.328 ; bound9600_reg[5]                ; bound9600_reg[12] ; clk_50M      ; clk_50M     ; 1.000        ; -0.037     ; 1.278      ;
+; -0.326 ; bound9600_reg[4]                ; bound9600_reg[4]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.037     ; 1.276      ;
+; -0.314 ; bound9600_reg[10]               ; bound9600_reg[0]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.037     ; 1.264      ;
+; -0.308 ; bound9600_reg[2]                ; bound9600_reg[10] ; clk_50M      ; clk_50M     ; 1.000        ; -0.037     ; 1.258      ;
+; -0.303 ; bound9600_reg[1]                ; bound9600_reg[0]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.037     ; 1.253      ;
+; -0.301 ; bound9600_reg[0]                ; bound9600_reg[6]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.037     ; 1.251      ;
+; -0.298 ; bound9600_reg[9]                ; bound9600_reg[4]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.037     ; 1.248      ;
+; -0.292 ; bound9600_reg[0]                ; bound9600_reg[3]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.037     ; 1.242      ;
+; -0.291 ; bound9600_reg[3]                ; bound9600_reg[4]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.037     ; 1.241      ;
+; -0.290 ; value[7]                        ; uart_txd~reg0     ; clk_50M      ; clk_50M     ; 1.000        ; -0.037     ; 1.240      ;
+; -0.286 ; bound9600_reg[4]                ; bound9600_reg[12] ; clk_50M      ; clk_50M     ; 1.000        ; -0.037     ; 1.236      ;
+; -0.284 ; bound9600_reg[5]                ; bound9600_reg[10] ; clk_50M      ; clk_50M     ; 1.000        ; -0.037     ; 1.234      ;
+; -0.271 ; bound9600_reg[3]                ; bound9600_reg[6]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.037     ; 1.221      ;
+; -0.268 ; value[3]                        ; uart_txd~reg0     ; clk_50M      ; clk_50M     ; 1.000        ; -0.037     ; 1.218      ;
+; -0.268 ; bound9600_reg[12]               ; bound9600_reg[4]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.037     ; 1.218      ;
+; -0.267 ; bound9600_reg[1]                ; bound9600_reg[6]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.037     ; 1.217      ;
+; -0.266 ; bound9600_reg[8]                ; bound9600_reg[10] ; clk_50M      ; clk_50M     ; 1.000        ; -0.037     ; 1.216      ;
+; -0.265 ; bound9600_reg[7]                ; bound9600_reg[12] ; clk_50M      ; clk_50M     ; 1.000        ; -0.037     ; 1.215      ;
+; -0.263 ; bound9600_reg[6]                ; bound9600_reg[4]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.037     ; 1.213      ;
+; -0.256 ; bound9600_reg[11]               ; bound9600_reg[0]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.037     ; 1.206      ;
+; -0.244 ; bound9600_reg[5]                ; bound9600_reg[0]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.037     ; 1.194      ;
+; -0.244 ; bound9600_reg[10]               ; bound9600_reg[4]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.037     ; 1.194      ;
+; -0.242 ; bound9600_reg[4]                ; bound9600_reg[10] ; clk_50M      ; clk_50M     ; 1.000        ; -0.037     ; 1.192      ;
+; -0.233 ; bound9600_reg[1]                ; bound9600_reg[3]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.037     ; 1.183      ;
+; -0.221 ; bound9600_reg[7]                ; bound9600_reg[10] ; clk_50M      ; clk_50M     ; 1.000        ; -0.037     ; 1.171      ;
+; -0.221 ; send_counter[1]                 ; uart_txd~reg0     ; clk_50M      ; clk_50M     ; 1.000        ; -0.037     ; 1.171      ;
+; -0.220 ; bound9600_reg[0]                ; bound9600_reg[11] ; clk_50M      ; clk_50M     ; 1.000        ; -0.037     ; 1.170      ;
+; -0.219 ; bound9600_reg[8]                ; bound9600_reg[12] ; clk_50M      ; clk_50M     ; 1.000        ; -0.037     ; 1.169      ;
+; -0.219 ; bound9600_reg[6]                ; bound9600_reg[12] ; clk_50M      ; clk_50M     ; 1.000        ; -0.037     ; 1.169      ;
+; -0.218 ; bound9600_reg[8]                ; bound9600_reg[6]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.037     ; 1.168      ;
+; -0.216 ; bound9600_reg[2]                ; bound9600_reg[6]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.037     ; 1.166      ;
+; -0.211 ; bound9600_reg[9]                ; bound9600_reg[10] ; clk_50M      ; clk_50M     ; 1.000        ; -0.037     ; 1.161      ;
+; -0.203 ; bound9600_reg[1]                ; bound9600_reg[4]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.037     ; 1.153      ;
+; -0.197 ; bound9600_reg[9]                ; bound9600_reg[12] ; clk_50M      ; clk_50M     ; 1.000        ; -0.037     ; 1.147      ;
+; -0.186 ; bound9600_reg[4]                ; bound9600_reg[6]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.037     ; 1.136      ;
+; -0.178 ; bound9600_reg[12]               ; bound9600_reg[10] ; clk_50M      ; clk_50M     ; 1.000        ; -0.037     ; 1.128      ;
+; -0.175 ; bound9600_reg[6]                ; bound9600_reg[10] ; clk_50M      ; clk_50M     ; 1.000        ; -0.037     ; 1.125      ;
+; -0.175 ; bound9600_reg[7]                ; bound9600_reg[0]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.037     ; 1.125      ;
+; -0.167 ; bound9600_reg[0]                ; bound9600_reg[4]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.037     ; 1.117      ;
+; -0.165 ; bound9600_reg[3]                ; bound9600_reg[11] ; clk_50M      ; clk_50M     ; 1.000        ; -0.037     ; 1.115      ;
+; -0.163 ; bound9600_reg[9]                ; bound9600_reg[6]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.037     ; 1.113      ;
+; -0.161 ; bound9600_reg[1]                ; bound9600_reg[11] ; clk_50M      ; clk_50M     ; 1.000        ; -0.037     ; 1.111      ;
+; -0.156 ; bound9600_reg[11]               ; bound9600_reg[4]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.037     ; 1.106      ;
+; -0.155 ; bound9600_reg[10]               ; bound9600_reg[12] ; clk_50M      ; clk_50M     ; 1.000        ; -0.037     ; 1.105      ;
+; -0.154 ; bound9600_reg[10]               ; bound9600_reg[10] ; clk_50M      ; clk_50M     ; 1.000        ; -0.037     ; 1.104      ;
+; -0.152 ; bound9600_reg[0]                ; bound9600_reg[9]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.037     ; 1.102      ;
+; -0.151 ; bound9600_reg[2]                ; bound9600_reg[3]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.037     ; 1.101      ;
+; -0.144 ; bound9600_reg[5]                ; bound9600_reg[4]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.037     ; 1.094      ;
+; -0.139 ; bound9600_reg[8]                ; bound9600_reg[3]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.037     ; 1.089      ;
+; -0.129 ; bound9600_reg[11]               ; bound9600_reg[12] ; clk_50M      ; clk_50M     ; 1.000        ; -0.037     ; 1.079      ;
+; -0.128 ; bound9600_reg[12]               ; bound9600_reg[12] ; clk_50M      ; clk_50M     ; 1.000        ; -0.037     ; 1.078      ;
+; -0.128 ; bound9600_reg[12]               ; bound9600_reg[6]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.037     ; 1.078      ;
+; -0.127 ; bound9600_reg[5]                ; bound9600_reg[6]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.037     ; 1.077      ;
+; -0.123 ; bound9600_reg[0]                ; bound9600_reg[8]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.037     ; 1.073      ;
+; -0.123 ; bound9600_reg[6]                ; bound9600_reg[6]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.037     ; 1.073      ;
+; -0.104 ; bound9600_reg[10]               ; bound9600_reg[6]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.037     ; 1.054      ;
+; -0.100 ; edge_detect:comb_155|data_in_d1 ; send_counter[3]   ; clk_50M      ; clk_50M     ; 1.000        ; -0.039     ; 1.048      ;
+; -0.100 ; edge_detect:comb_155|data_in_d1 ; send_counter[2]   ; clk_50M      ; clk_50M     ; 1.000        ; -0.039     ; 1.048      ;
+; -0.100 ; edge_detect:comb_155|data_in_d1 ; send_counter[1]   ; clk_50M      ; clk_50M     ; 1.000        ; -0.039     ; 1.048      ;
+; -0.100 ; edge_detect:comb_155|data_in_d1 ; send_counter[0]   ; clk_50M      ; clk_50M     ; 1.000        ; -0.039     ; 1.048      ;
+; -0.098 ; value[4]                        ; uart_txd~reg0     ; clk_50M      ; clk_50M     ; 1.000        ; -0.037     ; 1.048      ;
+; -0.097 ; bound9600_reg[3]                ; bound9600_reg[9]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.037     ; 1.047      ;
+; -0.096 ; bound9600_reg[4]                ; bound9600_reg[3]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.037     ; 1.046      ;
+; -0.093 ; bound9600_reg[1]                ; bound9600_reg[9]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.037     ; 1.043      ;
+; -0.093 ; bound9600_reg[3]                ; bound9600_reg[8]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.037     ; 1.043      ;
+; -0.089 ; bound9600_reg[1]                ; bound9600_reg[8]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.037     ; 1.039      ;
+; -0.084 ; bound9600_reg[0]                ; bound9600_reg[7]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.037     ; 1.034      ;
+; -0.084 ; bound9600_reg[9]                ; bound9600_reg[3]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.037     ; 1.034      ;
+; -0.079 ; bound9600_reg[2]                ; bound9600_reg[11] ; clk_50M      ; clk_50M     ; 1.000        ; -0.037     ; 1.029      ;
+; -0.078 ; value[2]                        ; uart_txd~reg0     ; clk_50M      ; clk_50M     ; 1.000        ; -0.037     ; 1.028      ;
+; -0.075 ; bound9600_reg[7]                ; bound9600_reg[4]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.037     ; 1.025      ;
+; -0.069 ; bound9600_reg[11]               ; bound9600_reg[10] ; clk_50M      ; clk_50M     ; 1.000        ; -0.037     ; 1.019      ;
+; -0.063 ; value[6]                        ; uart_txd~reg0     ; clk_50M      ; clk_50M     ; 1.000        ; -0.037     ; 1.013      ;
+; -0.061 ; bound9600_reg[3]                ; bound9600_reg[3]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.037     ; 1.011      ;
+; -0.040 ; tx_flag                         ; uart_txd~reg0     ; clk_50M      ; clk_50M     ; 1.000        ; -0.037     ; 0.990      ;
+; -0.038 ; bound9600_reg[12]               ; bound9600_reg[3]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.037     ; 0.988      ;
+; -0.034 ; tx_flag                         ; send_counter[3]   ; clk_50M      ; clk_50M     ; 1.000        ; -0.037     ; 0.984      ;
+; -0.034 ; tx_flag                         ; send_counter[2]   ; clk_50M      ; clk_50M     ; 1.000        ; -0.037     ; 0.984      ;
+; -0.034 ; tx_flag                         ; send_counter[1]   ; clk_50M      ; clk_50M     ; 1.000        ; -0.037     ; 0.984      ;
+; -0.034 ; tx_flag                         ; send_counter[0]   ; clk_50M      ; clk_50M     ; 1.000        ; -0.037     ; 0.984      ;
+; -0.033 ; bound9600_reg[6]                ; bound9600_reg[3]  ; clk_50M      ; clk_50M     ; 1.000        ; -0.037     ; 0.983      ;
++--------+---------------------------------+-------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Hold: 'clk_50M'                                                                                                            ;
++-------+---------------------------------+---------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                       ; To Node                         ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------------+---------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.186 ; uart_txd~reg0                   ; uart_txd~reg0                   ; clk_50M      ; clk_50M     ; 0.000        ; 0.037      ; 0.307      ;
+; 0.186 ; send_counter[3]                 ; send_counter[3]                 ; clk_50M      ; clk_50M     ; 0.000        ; 0.037      ; 0.307      ;
+; 0.186 ; tx_flag                         ; tx_flag                         ; clk_50M      ; clk_50M     ; 0.000        ; 0.037      ; 0.307      ;
+; 0.186 ; send_counter[2]                 ; send_counter[2]                 ; clk_50M      ; clk_50M     ; 0.000        ; 0.037      ; 0.307      ;
+; 0.186 ; send_counter[1]                 ; send_counter[1]                 ; clk_50M      ; clk_50M     ; 0.000        ; 0.037      ; 0.307      ;
+; 0.193 ; send_counter[0]                 ; send_counter[0]                 ; clk_50M      ; clk_50M     ; 0.000        ; 0.037      ; 0.314      ;
+; 0.209 ; send_counter[2]                 ; send_counter[3]                 ; clk_50M      ; clk_50M     ; 0.000        ; 0.037      ; 0.330      ;
+; 0.211 ; edge_detect:comb_156|data_in_d1 ; edge_detect:comb_156|data_in_d2 ; clk_50M      ; clk_50M     ; 0.000        ; 0.037      ; 0.332      ;
+; 0.216 ; send_counter[0]                 ; send_counter[2]                 ; clk_50M      ; clk_50M     ; 0.000        ; 0.037      ; 0.337      ;
+; 0.216 ; tx_flag                         ; send_counter[0]                 ; clk_50M      ; clk_50M     ; 0.000        ; 0.037      ; 0.337      ;
+; 0.218 ; send_counter[0]                 ; send_counter[1]                 ; clk_50M      ; clk_50M     ; 0.000        ; 0.037      ; 0.339      ;
+; 0.281 ; edge_detect:comb_156|data_in_d2 ; tx_flag                         ; clk_50M      ; clk_50M     ; 0.000        ; 0.037      ; 0.402      ;
+; 0.286 ; bound9600_reg[11]               ; edge_detect:comb_155|data_in_d1 ; clk_50M      ; clk_50M     ; 0.000        ; 0.037      ; 0.407      ;
+; 0.304 ; bound9600_reg[5]                ; bound9600_reg[5]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.037      ; 0.425      ;
+; 0.304 ; bound9600_reg[1]                ; bound9600_reg[1]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.037      ; 0.425      ;
+; 0.305 ; bound9600_reg[7]                ; bound9600_reg[7]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.037      ; 0.426      ;
+; 0.305 ; bound9600_reg[11]               ; bound9600_reg[11]               ; clk_50M      ; clk_50M     ; 0.000        ; 0.037      ; 0.426      ;
+; 0.305 ; bound9600_reg[9]                ; bound9600_reg[9]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.037      ; 0.426      ;
+; 0.305 ; bound9600_reg[2]                ; bound9600_reg[2]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.037      ; 0.426      ;
+; 0.306 ; bound9600_reg[8]                ; bound9600_reg[8]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.037      ; 0.427      ;
+; 0.312 ; send_counter[1]                 ; send_counter[2]                 ; clk_50M      ; clk_50M     ; 0.000        ; 0.037      ; 0.433      ;
+; 0.321 ; tx_flag                         ; send_counter[3]                 ; clk_50M      ; clk_50M     ; 0.000        ; 0.037      ; 0.442      ;
+; 0.322 ; tx_flag                         ; send_counter[1]                 ; clk_50M      ; clk_50M     ; 0.000        ; 0.037      ; 0.443      ;
+; 0.377 ; tx_flag                         ; send_counter[2]                 ; clk_50M      ; clk_50M     ; 0.000        ; 0.037      ; 0.498      ;
+; 0.388 ; edge_detect:comb_156|data_in_d1 ; tx_flag                         ; clk_50M      ; clk_50M     ; 0.000        ; 0.037      ; 0.509      ;
+; 0.427 ; edge_detect:comb_155|data_in_d1 ; edge_detect:comb_155|data_in_d2 ; clk_50M      ; clk_50M     ; 0.000        ; 0.035      ; 0.546      ;
+; 0.453 ; bound9600_reg[1]                ; bound9600_reg[2]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.037      ; 0.574      ;
+; 0.454 ; bound9600_reg[7]                ; bound9600_reg[8]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.037      ; 0.575      ;
+; 0.458 ; bound9600_reg[4]                ; bound9600_reg[4]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.037      ; 0.579      ;
+; 0.464 ; bound9600_reg[4]                ; bound9600_reg[5]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.037      ; 0.585      ;
+; 0.464 ; bound9600_reg[8]                ; bound9600_reg[9]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.037      ; 0.585      ;
+; 0.465 ; bound9600_reg[6]                ; bound9600_reg[7]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.037      ; 0.586      ;
+; 0.468 ; bound9600_reg[6]                ; bound9600_reg[8]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.037      ; 0.589      ;
+; 0.469 ; send_counter[0]                 ; send_counter[3]                 ; clk_50M      ; clk_50M     ; 0.000        ; 0.037      ; 0.590      ;
+; 0.473 ; bound9600_reg[12]               ; bound9600_reg[12]               ; clk_50M      ; clk_50M     ; 0.000        ; 0.037      ; 0.594      ;
+; 0.487 ; tx_flag                         ; uart_txd~reg0                   ; clk_50M      ; clk_50M     ; 0.000        ; 0.037      ; 0.608      ;
+; 0.496 ; value[1]                        ; uart_txd~reg0                   ; clk_50M      ; clk_50M     ; 0.000        ; 0.037      ; 0.617      ;
+; 0.516 ; bound9600_reg[5]                ; bound9600_reg[7]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.037      ; 0.637      ;
+; 0.517 ; bound9600_reg[9]                ; bound9600_reg[11]               ; clk_50M      ; clk_50M     ; 0.000        ; 0.037      ; 0.638      ;
+; 0.517 ; bound9600_reg[7]                ; bound9600_reg[9]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.037      ; 0.638      ;
+; 0.519 ; bound9600_reg[6]                ; bound9600_reg[6]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.037      ; 0.640      ;
+; 0.519 ; send_counter[0]                 ; tx_flag                         ; clk_50M      ; clk_50M     ; 0.000        ; 0.037      ; 0.640      ;
+; 0.519 ; bound9600_reg[5]                ; bound9600_reg[8]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.037      ; 0.640      ;
+; 0.520 ; send_counter[1]                 ; send_counter[3]                 ; clk_50M      ; clk_50M     ; 0.000        ; 0.037      ; 0.641      ;
+; 0.529 ; bound9600_reg[2]                ; bound9600_reg[5]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.037      ; 0.650      ;
+; 0.530 ; bound9600_reg[4]                ; bound9600_reg[7]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.037      ; 0.651      ;
+; 0.530 ; bound9600_reg[8]                ; bound9600_reg[11]               ; clk_50M      ; clk_50M     ; 0.000        ; 0.037      ; 0.651      ;
+; 0.531 ; bound9600_reg[10]               ; bound9600_reg[11]               ; clk_50M      ; clk_50M     ; 0.000        ; 0.037      ; 0.652      ;
+; 0.531 ; bound9600_reg[6]                ; bound9600_reg[9]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.037      ; 0.652      ;
+; 0.533 ; bound9600_reg[0]                ; bound9600_reg[1]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.037      ; 0.654      ;
+; 0.533 ; bound9600_reg[4]                ; bound9600_reg[8]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.037      ; 0.654      ;
+; 0.536 ; bound9600_reg[0]                ; bound9600_reg[2]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.037      ; 0.657      ;
+; 0.546 ; send_counter[3]                 ; tx_flag                         ; clk_50M      ; clk_50M     ; 0.000        ; 0.037      ; 0.667      ;
+; 0.553 ; send_counter[2]                 ; uart_txd~reg0                   ; clk_50M      ; clk_50M     ; 0.000        ; 0.037      ; 0.674      ;
+; 0.559 ; send_counter[1]                 ; uart_txd~reg0                   ; clk_50M      ; clk_50M     ; 0.000        ; 0.037      ; 0.680      ;
+; 0.566 ; send_counter[2]                 ; tx_flag                         ; clk_50M      ; clk_50M     ; 0.000        ; 0.037      ; 0.687      ;
+; 0.582 ; bound9600_reg[1]                ; bound9600_reg[5]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.037      ; 0.703      ;
+; 0.582 ; bound9600_reg[5]                ; bound9600_reg[9]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.037      ; 0.703      ;
+; 0.583 ; bound9600_reg[7]                ; bound9600_reg[11]               ; clk_50M      ; clk_50M     ; 0.000        ; 0.037      ; 0.704      ;
+; 0.584 ; bound9600_reg[3]                ; bound9600_reg[5]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.037      ; 0.705      ;
+; 0.594 ; value[5]                        ; uart_txd~reg0                   ; clk_50M      ; clk_50M     ; 0.000        ; 0.037      ; 0.715      ;
+; 0.595 ; bound9600_reg[2]                ; bound9600_reg[7]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.037      ; 0.716      ;
+; 0.596 ; bound9600_reg[4]                ; bound9600_reg[9]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.037      ; 0.717      ;
+; 0.597 ; bound9600_reg[6]                ; bound9600_reg[11]               ; clk_50M      ; clk_50M     ; 0.000        ; 0.037      ; 0.718      ;
+; 0.598 ; bound9600_reg[2]                ; bound9600_reg[8]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.037      ; 0.719      ;
+; 0.604 ; bound9600_reg[10]               ; bound9600_reg[10]               ; clk_50M      ; clk_50M     ; 0.000        ; 0.037      ; 0.725      ;
+; 0.618 ; bound9600_reg[2]                ; bound9600_reg[4]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.037      ; 0.739      ;
+; 0.635 ; bound9600_reg[7]                ; bound9600_reg[3]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.037      ; 0.756      ;
+; 0.642 ; send_counter[3]                 ; uart_txd~reg0                   ; clk_50M      ; clk_50M     ; 0.000        ; 0.037      ; 0.763      ;
+; 0.647 ; value[0]                        ; uart_txd~reg0                   ; clk_50M      ; clk_50M     ; 0.000        ; 0.037      ; 0.768      ;
+; 0.648 ; bound9600_reg[1]                ; bound9600_reg[7]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.037      ; 0.769      ;
+; 0.648 ; bound9600_reg[5]                ; bound9600_reg[11]               ; clk_50M      ; clk_50M     ; 0.000        ; 0.037      ; 0.769      ;
+; 0.650 ; bound9600_reg[3]                ; bound9600_reg[7]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.037      ; 0.771      ;
+; 0.651 ; bound9600_reg[1]                ; bound9600_reg[8]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.037      ; 0.772      ;
+; 0.653 ; bound9600_reg[3]                ; bound9600_reg[8]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.037      ; 0.774      ;
+; 0.659 ; edge_detect:comb_156|data_in_d2 ; value[0]                        ; clk_50M      ; clk_50M     ; 0.000        ; 0.037      ; 0.780      ;
+; 0.659 ; edge_detect:comb_156|data_in_d2 ; value[1]                        ; clk_50M      ; clk_50M     ; 0.000        ; 0.037      ; 0.780      ;
+; 0.659 ; edge_detect:comb_156|data_in_d2 ; value[2]                        ; clk_50M      ; clk_50M     ; 0.000        ; 0.037      ; 0.780      ;
+; 0.659 ; edge_detect:comb_156|data_in_d2 ; value[3]                        ; clk_50M      ; clk_50M     ; 0.000        ; 0.037      ; 0.780      ;
+; 0.659 ; edge_detect:comb_156|data_in_d2 ; value[5]                        ; clk_50M      ; clk_50M     ; 0.000        ; 0.037      ; 0.780      ;
+; 0.659 ; edge_detect:comb_156|data_in_d2 ; value[4]                        ; clk_50M      ; clk_50M     ; 0.000        ; 0.037      ; 0.780      ;
+; 0.659 ; edge_detect:comb_156|data_in_d2 ; value[6]                        ; clk_50M      ; clk_50M     ; 0.000        ; 0.037      ; 0.780      ;
+; 0.659 ; edge_detect:comb_156|data_in_d2 ; value[7]                        ; clk_50M      ; clk_50M     ; 0.000        ; 0.037      ; 0.780      ;
+; 0.661 ; bound9600_reg[2]                ; bound9600_reg[9]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.037      ; 0.782      ;
+; 0.662 ; bound9600_reg[4]                ; bound9600_reg[11]               ; clk_50M      ; clk_50M     ; 0.000        ; 0.037      ; 0.783      ;
+; 0.664 ; bound9600_reg[11]               ; bound9600_reg[12]               ; clk_50M      ; clk_50M     ; 0.000        ; 0.037      ; 0.785      ;
+; 0.665 ; bound9600_reg[5]                ; bound9600_reg[6]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.037      ; 0.786      ;
+; 0.665 ; bound9600_reg[0]                ; bound9600_reg[5]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.037      ; 0.786      ;
+; 0.665 ; bound9600_reg[3]                ; bound9600_reg[3]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.037      ; 0.786      ;
+; 0.671 ; bound9600_reg[1]                ; bound9600_reg[4]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.037      ; 0.792      ;
+; 0.673 ; bound9600_reg[3]                ; bound9600_reg[4]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.037      ; 0.794      ;
+; 0.679 ; bound9600_reg[4]                ; bound9600_reg[6]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.037      ; 0.800      ;
+; 0.683 ; send_counter[1]                 ; tx_flag                         ; clk_50M      ; clk_50M     ; 0.000        ; 0.037      ; 0.804      ;
+; 0.685 ; bound9600_reg[9]                ; bound9600_reg[10]               ; clk_50M      ; clk_50M     ; 0.000        ; 0.037      ; 0.806      ;
+; 0.689 ; bound9600_reg[0]                ; bound9600_reg[3]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.037      ; 0.810      ;
+; 0.698 ; bound9600_reg[8]                ; bound9600_reg[10]               ; clk_50M      ; clk_50M     ; 0.000        ; 0.037      ; 0.819      ;
+; 0.703 ; bound9600_reg[5]                ; bound9600_reg[3]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.037      ; 0.824      ;
+; 0.714 ; bound9600_reg[1]                ; bound9600_reg[9]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.037      ; 0.835      ;
+; 0.716 ; bound9600_reg[3]                ; bound9600_reg[9]                ; clk_50M      ; clk_50M     ; 0.000        ; 0.037      ; 0.837      ;
+; 0.721 ; bound9600_reg[7]                ; bound9600_reg[12]               ; clk_50M      ; clk_50M     ; 0.000        ; 0.037      ; 0.842      ;
++-------+---------------------------------+---------------------------------+--------------+-------------+--------------+------------+------------+
+
+
+----------------------------------------------
+; Fast 1200mV 0C Model Metastability Summary ;
+----------------------------------------------
+No synchronizer chains to report.
+
+
++-------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                           ;
++------------------+---------+-------+----------+---------+---------------------+
+; Clock            ; Setup   ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+---------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -1.660  ; 0.186 ; N/A      ; N/A     ; -3.000              ;
+;  clk_50M         ; -1.660  ; 0.186 ; N/A      ; N/A     ; -3.000              ;
+; Design-wide TNS  ; -27.663 ; 0.0   ; 0.0      ; 0.0     ; -35.984             ;
+;  clk_50M         ; -27.663 ; 0.000 ; N/A      ; N/A     ; -35.984             ;
++------------------+---------+-------+----------+---------+---------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Board Trace Model Assignments                                                                                                                                                                                                                                                                                                                                                                                    ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; Pin           ; I/O Standard ; Near Tline Length ; Near Tline L per Length ; Near Tline C per Length ; Near Series R ; Near Differential R ; Near Pull-up R ; Near Pull-down R ; Near C ; Far Tline Length ; Far Tline L per Length ; Far Tline C per Length ; Far Series R ; Far Pull-up R ; Far Pull-down R ; Far C ; Termination Voltage ; Far Differential R ; EBD File Name ; EBD Signal Name ; EBD Far-end ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; uart_txd      ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+
+
++----------------------------------------------------------------------------+
+; Input Transition Times                                                     ;
++-------------------------+--------------+-----------------+-----------------+
+; Pin                     ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
++-------------------------+--------------+-----------------+-----------------+
+; clk_50M                 ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; reset                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; write_value[7]          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; write_value[6]          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; write_value[4]          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; write_value[3]          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; write_value[2]          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; write_value[5]          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; write_value[0]          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; write_value[1]          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; write                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_ASDO_DATA1~     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_FLASH_nCE_nCSO~ ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_DATA0~          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
++-------------------------+--------------+-----------------+-----------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; uart_txd      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.44e-09 V                   ; 2.38 V              ; -0.0145 V           ; 0.169 V                              ; 0.026 V                              ; 4.83e-10 s                  ; 4.71e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.44e-09 V                  ; 2.38 V             ; -0.0145 V          ; 0.169 V                             ; 0.026 V                             ; 4.83e-10 s                 ; 4.71e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.45e-09 V                   ; 2.38 V              ; -0.0609 V           ; 0.148 V                              ; 0.095 V                              ; 2.82e-10 s                  ; 2.59e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.45e-09 V                  ; 2.38 V             ; -0.0609 V          ; 0.148 V                             ; 0.095 V                             ; 2.82e-10 s                 ; 2.59e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 5.61e-09 V                   ; 2.38 V              ; -0.00274 V          ; 0.141 V                              ; 0.006 V                              ; 4.7e-10 s                   ; 6.02e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 5.61e-09 V                  ; 2.38 V             ; -0.00274 V         ; 0.141 V                             ; 0.006 V                             ; 4.7e-10 s                  ; 6.02e-10 s                 ; Yes                       ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 85c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; uart_txd      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 7.16e-07 V                   ; 2.35 V              ; -0.00832 V          ; 0.101 V                              ; 0.024 V                              ; 6.39e-10 s                  ; 6e-10 s                     ; Yes                        ; Yes                        ; 2.32 V                      ; 7.16e-07 V                  ; 2.35 V             ; -0.00832 V         ; 0.101 V                             ; 0.024 V                             ; 6.39e-10 s                 ; 6e-10 s                    ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 5.74e-07 V                   ; 2.36 V              ; -0.0201 V           ; 0.072 V                              ; 0.033 V                              ; 4.04e-10 s                  ; 3.29e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 5.74e-07 V                  ; 2.36 V             ; -0.0201 V          ; 0.072 V                             ; 0.033 V                             ; 4.04e-10 s                 ; 3.29e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 9.45e-07 V                   ; 2.35 V              ; -0.00643 V          ; 0.081 V                              ; 0.031 V                              ; 5.31e-10 s                  ; 7.59e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 9.45e-07 V                  ; 2.35 V             ; -0.00643 V         ; 0.081 V                             ; 0.031 V                             ; 5.31e-10 s                 ; 7.59e-10 s                 ; Yes                       ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Fast 1200mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; uart_txd      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.74e-08 V                   ; 2.71 V              ; -0.0317 V           ; 0.148 V                              ; 0.064 V                              ; 4.51e-10 s                  ; 4.15e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.74e-08 V                  ; 2.71 V             ; -0.0317 V          ; 0.148 V                             ; 0.064 V                             ; 4.51e-10 s                 ; 4.15e-10 s                 ; No                        ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.22e-08 V                   ; 2.74 V              ; -0.06 V             ; 0.158 V                              ; 0.08 V                               ; 2.68e-10 s                  ; 2.19e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 2.22e-08 V                  ; 2.74 V             ; -0.06 V            ; 0.158 V                             ; 0.08 V                              ; 2.68e-10 s                 ; 2.19e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 3.54e-08 V                   ; 2.7 V               ; -0.00943 V          ; 0.276 V                              ; 0.035 V                              ; 3.19e-10 s                  ; 4.99e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 3.54e-08 V                  ; 2.7 V              ; -0.00943 V         ; 0.276 V                             ; 0.035 V                             ; 3.19e-10 s                 ; 4.99e-10 s                 ; No                        ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk_50M    ; clk_50M  ; 245      ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk_50M    ; clk_50M  ; 245      ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No non-DPA dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths Summary                    ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 10    ; 10   ;
+; Unconstrained Input Port Paths  ; 40    ; 40   ;
+; Unconstrained Output Ports      ; 1     ; 1    ;
+; Unconstrained Output Port Paths ; 1     ; 1    ;
++---------------------------------+-------+------+
+
+
++----------------------------------------+
+; Clock Status Summary                   ;
++---------+---------+------+-------------+
+; Target  ; Clock   ; Type ; Status      ;
++---------+---------+------+-------------+
+; clk_50M ; clk_50M ; Base ; Constrained ;
++---------+---------+------+-------------+
+
+
++-------------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                             ;
++----------------+--------------------------------------------------------------------------------------+
+; Input Port     ; Comment                                                                              ;
++----------------+--------------------------------------------------------------------------------------+
+; reset          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; write          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; write_value[0] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; write_value[1] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; write_value[2] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; write_value[3] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; write_value[4] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; write_value[5] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; write_value[6] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; write_value[7] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++----------------+--------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; uart_txd    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                             ;
++----------------+--------------------------------------------------------------------------------------+
+; Input Port     ; Comment                                                                              ;
++----------------+--------------------------------------------------------------------------------------+
+; reset          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; write          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; write_value[0] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; write_value[1] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; write_value[2] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; write_value[3] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; write_value[4] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; write_value[5] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; write_value[6] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; write_value[7] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++----------------+--------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; uart_txd    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Timing Analyzer
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+    Info: Processing started: Mon Apr 20 16:50:29 2020
+Info: Command: quartus_sta uart_tx -c uart_tx
+Info: qsta_default_script.tcl version: #1
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (21076): High junction temperature operating condition is not set. Assuming a default value of '85'.
+Info (21076): Low junction temperature operating condition is not set. Assuming a default value of '0'.
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'uart_tx.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name clk_50M clk_50M
+Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow 1200mV 85C Model
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
+Info (332146): Worst-case setup slack is -1.660
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -1.660             -27.663 clk_50M 
+Info (332146): Worst-case hold slack is 0.356
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.356               0.000 clk_50M 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000             -34.000 clk_50M 
+Info: Analyzing Slow 1200mV 0C Model
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
+Info (332146): Worst-case setup slack is -1.370
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -1.370             -21.809 clk_50M 
+Info (332146): Worst-case hold slack is 0.310
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.310               0.000 clk_50M 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000             -34.000 clk_50M 
+Info: Analyzing Fast 1200mV 0C Model
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
+Info (332146): Worst-case setup slack is -0.502
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -0.502              -3.741 clk_50M 
+Info (332146): Worst-case hold slack is 0.186
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.186               0.000 clk_50M 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000             -35.984 clk_50M 
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus Prime Timing Analyzer was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 4768 megabytes
+    Info: Processing ended: Mon Apr 20 16:50:34 2020
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:04
+
+

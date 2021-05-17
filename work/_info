@@ -1,0 +1,70 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/USER/Desktop/verilog_uart_tx
+vedge_detect
+Z1 !s110 1621267806
+!i10b 1
+!s100 ^><jU]mz3A9=l8MkSB_I43
+IN6=oF[dL7LbTjClb<SHJY3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1598185958
+8edge_detect.v
+Fedge_detect.v
+L0 2
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1621267806.000000
+Z5 !s107 uart_tx_tb.v|uart_tx.v|edge_detect.v|
+Z6 !s90 -reportprogress|300|edge_detect.v|uart_tx.v|uart_tx_tb.v|
+!i113 1
+Z7 tCvgOpt 0
+vuart_tx
+R1
+!i10b 1
+!s100 3jiJcMHAJXDj9U6AOQ71g1
+IBU7]z<IIE82knf67PD?hc2
+R2
+R0
+w1621267801
+8uart_tx.v
+Fuart_tx.v
+L0 2
+R3
+r1
+!s85 0
+31
+R4
+R5
+R6
+!i113 1
+R7
+vuart_tx_tb
+R1
+!i10b 1
+!s100 PL_F6G5_23ccM73:]G`@]2
+IhZHKWfo>QGCeGBza[^o;f2
+R2
+R0
+w1621267733
+8uart_tx_tb.v
+Fuart_tx_tb.v
+L0 3
+R3
+r1
+!s85 0
+31
+R4
+R5
+R6
+!i113 1
+R7

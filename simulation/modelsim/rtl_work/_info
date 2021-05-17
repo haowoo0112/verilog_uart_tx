@@ -1,0 +1,76 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/USER/Desktop/uart_tx/simulation/modelsim
+vedge_detect
+Z1 !s110 1587181428
+!i10b 1
+!s100 ^><jU]mz3A9=l8MkSB_I43
+I9fgeS9iBI7_kfi`MT4ATK3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1587181299
+8C:/Users/USER/Desktop/uart_tx/edge_detect.v
+FC:/Users/USER/Desktop/uart_tx/edge_detect.v
+L0 2
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1587181428.000000
+!s107 C:/Users/USER/Desktop/uart_tx/edge_detect.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/USER/Desktop/uart_tx|C:/Users/USER/Desktop/uart_tx/edge_detect.v|
+!i113 1
+Z5 o-vlog01compat -work work
+Z6 !s92 -vlog01compat -work work +incdir+C:/Users/USER/Desktop/uart_tx
+Z7 tCvgOpt 0
+vhw1_tb
+R1
+!i10b 1
+!s100 0COgC`:dZ6j[33KdmBVDe1
+I]>96:^26kRH1fAn^zbjBT3
+R2
+R0
+w1586181065
+8C:/Users/USER/Desktop/uart_tx/hw1_tb.v
+FC:/Users/USER/Desktop/uart_tx/hw1_tb.v
+L0 3
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/USER/Desktop/uart_tx/hw1_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/USER/Desktop/uart_tx|C:/Users/USER/Desktop/uart_tx/hw1_tb.v|
+!i113 1
+R5
+R6
+R7
+vuart_tx
+R1
+!i10b 1
+!s100 Ojj8Ng1_2bA=6nbTU:JCi1
+I^DRXk?06V>5=0Wm_KnOo`1
+R2
+R0
+w1587181271
+8C:/Users/USER/Desktop/uart_tx/uart_tx.v
+FC:/Users/USER/Desktop/uart_tx/uart_tx.v
+L0 2
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/USER/Desktop/uart_tx/uart_tx.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/USER/Desktop/uart_tx|C:/Users/USER/Desktop/uart_tx/uart_tx.v|
+!i113 1
+R5
+R6
+R7
