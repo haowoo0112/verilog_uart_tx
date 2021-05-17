@@ -9,3 +9,5 @@ TXD
 | edge_detect.v | gives one-tick pulses on every signal falling edge |
 | uart_tx_tb    | testbench                                          |
 | uart_tx       | main                                               |
+## UART TXD
+![](https://i.imgur.com/Qqrov2B.png)
